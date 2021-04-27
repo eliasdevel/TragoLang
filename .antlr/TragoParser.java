@@ -1,4 +1,4 @@
-// Generated from Trago.g by ANTLR 4.5.3
+// Generated from c:\Users\Elias\Documents\tragoLang\Trago.g by ANTLR 4.8
 
     //import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class TragoParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -25,19 +25,28 @@ public class TragoParser extends Parser {
 	public static final int
 		RULE_program = 0, RULE_main = 1, RULE_statement = 2, RULE_expression = 3, 
 		RULE_term = 4, RULE_factor = 5;
-	public static final String[] ruleNames = {
-		"program", "main", "statement", "expression", "term", "factor"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"program", "main", "statement", "expression", "term", "factor"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", "'='", 
-		"'vai'", "'boteco'", "'mijo'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", 
-		"OPEN_P", "CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", 
-		"NL", "SPACE"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", 
+			"'='", "'vai'", "'boteco'", "'mijo'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", 
+			"OPEN_P", "CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", 
+			"NL", "SPACE"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -102,6 +111,7 @@ public class TragoParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class ProgramContext extends ParserRuleContext {
 		public MainContext main() {
 			return getRuleContext(MainContext.class,0);
@@ -110,14 +120,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_program; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterProgram(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitProgram(this);
-		}
 	}
 
 	public final ProgramContext program() throws RecognitionException {
@@ -159,14 +161,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_main; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterMain(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitMain(this);
-		}
 	}
 
 	public final MainContext main() throws RecognitionException {
@@ -245,14 +239,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitStatement(this);
-		}
 	}
 
 	public final StatementContext statement() throws RecognitionException {
@@ -260,6 +246,7 @@ public class TragoParser extends Parser {
 		enterRule(_localctx, 4, RULE_statement);
 		try {
 			setState(39);
+			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case NL:
 				enterOuterAlt(_localctx, 1);
@@ -320,14 +307,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitExpression(this);
-		}
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
@@ -350,7 +329,10 @@ public class TragoParser extends Parser {
 				_la = _input.LA(1);
 				if ( !(_la==PLUS || _la==MINUS) ) {
 					((ExpressionContext)_localctx).op = (Token)_errHandler.recoverInline(this);
-				} else {
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
 					consume();
 				}
 				setState(43);
@@ -395,14 +377,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_term; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterTerm(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitTerm(this);
-		}
 	}
 
 	public final TermContext term() throws RecognitionException {
@@ -425,7 +399,10 @@ public class TragoParser extends Parser {
 				_la = _input.LA(1);
 				if ( !(_la==TIMES || _la==OVER) ) {
 					((TermContext)_localctx).op = (Token)_errHandler.recoverInline(this);
-				} else {
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
 					consume();
 				}
 				setState(53);
@@ -462,14 +439,6 @@ public class TragoParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_factor; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).enterFactor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TragoListener ) ((TragoListener)listener).exitFactor(this);
-		}
 	}
 
 	public final FactorContext factor() throws RecognitionException {
@@ -477,6 +446,7 @@ public class TragoParser extends Parser {
 		enterRule(_localctx, 10, RULE_factor);
 		try {
 			setState(67);
+			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case NUM:
 				enterOuterAlt(_localctx, 1);
@@ -513,14 +483,14 @@ public class TragoParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\23H\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\23H\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
 		"\7\3\30\n\3\f\3\16\3\33\13\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3"+
 		"\4\3\4\3\4\5\4*\n\4\3\5\3\5\3\5\3\5\3\5\7\5\61\n\5\f\5\16\5\64\13\5\3"+
 		"\6\3\6\3\6\3\6\3\6\7\6;\n\6\f\6\16\6>\13\6\3\7\3\7\3\7\3\7\3\7\3\7\5\7"+
-		"F\n\7\3\7\2\2\b\2\4\6\b\n\f\2\4\3\2\3\4\3\2\5\6F\2\16\3\2\2\2\4\20\3\2"+
-		"\2\2\6)\3\2\2\2\b+\3\2\2\2\n\65\3\2\2\2\fE\3\2\2\2\16\17\5\4\3\2\17\3"+
-		"\3\2\2\2\20\21\7\r\2\2\21\22\7\16\2\2\22\23\7\n\2\2\23\24\7\13\2\2\24"+
+		"F\n\7\3\7\2\2\b\2\4\6\b\n\f\2\4\3\2\3\4\3\2\5\6\2F\2\16\3\2\2\2\4\20\3"+
+		"\2\2\2\6)\3\2\2\2\b+\3\2\2\2\n\65\3\2\2\2\fE\3\2\2\2\16\17\5\4\3\2\17"+
+		"\3\3\2\2\2\20\21\7\r\2\2\21\22\7\16\2\2\22\23\7\n\2\2\23\24\7\13\2\2\24"+
 		"\25\7\b\2\2\25\31\b\3\1\2\26\30\5\6\4\2\27\26\3\2\2\2\30\33\3\2\2\2\31"+
 		"\27\3\2\2\2\31\32\3\2\2\2\32\34\3\2\2\2\33\31\3\2\2\2\34\35\7\t\2\2\35"+
 		"\36\7\22\2\2\36\37\b\3\1\2\37\5\3\2\2\2 *\7\22\2\2!\"\7\17\2\2\"#\7\n"+

@@ -37,9 +37,9 @@ OPEN_P    : '(' ;
 CLOSE_P   : ')' ;
 ATTRIB    : '=' ;
 
-FUNC      : 'func' ;
-MAIN      : 'main' ;
-PRINT     : 'print' ;
+FUNC      : 'vai' ;
+MAIN      : 'boteco' ;
+PRINT     : 'mijo' ;
 
 VAR     : 'a'..'z'+ ;
 NUM     : '0'..'9'+ ;

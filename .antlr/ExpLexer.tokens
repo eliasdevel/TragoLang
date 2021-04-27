@@ -1,0 +1,14 @@
+PLUS=1
+MINUS=2
+TIMES=3
+OVER=4
+OPEN_P=5
+CLOSE_P=6
+NUM=7
+SPACE=8
+'+'=1
+'-'=2
+'*'=3
+'/'=4
+'('=5
+')'=6

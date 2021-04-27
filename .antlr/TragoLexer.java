@@ -1,4 +1,4 @@
-// Generated from Trago.g by ANTLR 4.5.3
+// Generated from c:\Users\Elias\Documents\tragoLang\Trago.g by ANTLR 4.8
 
     //import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class TragoLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -22,24 +22,37 @@ public class TragoLexer extends Lexer {
 		PLUS=1, MINUS=2, TIMES=3, OVER=4, REMAINDER=5, OPEN_C=6, CLOSE_C=7, OPEN_P=8, 
 		CLOSE_P=9, ATTRIB=10, FUNC=11, MAIN=12, PRINT=13, VAR=14, NUM=15, NL=16, 
 		SPACE=17;
+	public static String[] channelNames = {
+		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+	};
+
 	public static String[] modeNames = {
 		"DEFAULT_MODE"
 	};
 
-	public static final String[] ruleNames = {
-		"PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", "OPEN_P", 
-		"CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", "NL", "SPACE"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", "OPEN_P", 
+			"CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", "NL", "SPACE"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", "'='", 
-		"'vai'", "'boteco'", "'mijo'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", 
-		"OPEN_P", "CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", 
-		"NL", "SPACE"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", 
+			"'='", "'vai'", "'boteco'", "'mijo'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", 
+			"OPEN_P", "CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", 
+			"NL", "SPACE"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -104,6 +117,9 @@ public class TragoLexer extends Lexer {
 	public String getSerializedATN() { return _serializedATN; }
 
 	@Override
+	public String[] getChannelNames() { return channelNames; }
+
+	@Override
 	public String[] getModeNames() { return modeNames; }
 
 	@Override
@@ -126,7 +142,7 @@ public class TragoLexer extends Lexer {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\2\23_\b\1\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\23_\b\1\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\3\2\3\2\3\3\3\3\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\b\3\b\3\t\3\t\3\n\3"+
@@ -134,12 +150,12 @@ public class TragoLexer extends Lexer {
 		"\3\16\3\16\3\17\6\17K\n\17\r\17\16\17L\3\20\6\20P\n\20\r\20\16\20Q\3\21"+
 		"\5\21U\n\21\3\21\3\21\3\22\6\22Z\n\22\r\22\16\22[\3\22\3\22\2\2\23\3\3"+
 		"\5\4\7\5\t\6\13\7\r\b\17\t\21\n\23\13\25\f\27\r\31\16\33\17\35\20\37\21"+
-		"!\22#\23\3\2\3\4\2\13\13\"\"b\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2\2\t"+
-		"\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2\2"+
-		"\2\2\25\3\2\2\2\2\27\3\2\2\2\2\31\3\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2\2"+
-		"\37\3\2\2\2\2!\3\2\2\2\2#\3\2\2\2\3%\3\2\2\2\5\'\3\2\2\2\7)\3\2\2\2\t"+
-		"+\3\2\2\2\13-\3\2\2\2\r/\3\2\2\2\17\61\3\2\2\2\21\63\3\2\2\2\23\65\3\2"+
-		"\2\2\25\67\3\2\2\2\279\3\2\2\2\31=\3\2\2\2\33D\3\2\2\2\35J\3\2\2\2\37"+
+		"!\22#\23\3\2\3\4\2\13\13\"\"\2b\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2\2"+
+		"\t\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2"+
+		"\2\2\2\25\3\2\2\2\2\27\3\2\2\2\2\31\3\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2"+
+		"\2\37\3\2\2\2\2!\3\2\2\2\2#\3\2\2\2\3%\3\2\2\2\5\'\3\2\2\2\7)\3\2\2\2"+
+		"\t+\3\2\2\2\13-\3\2\2\2\r/\3\2\2\2\17\61\3\2\2\2\21\63\3\2\2\2\23\65\3"+
+		"\2\2\2\25\67\3\2\2\2\279\3\2\2\2\31=\3\2\2\2\33D\3\2\2\2\35J\3\2\2\2\37"+
 		"O\3\2\2\2!T\3\2\2\2#Y\3\2\2\2%&\7-\2\2&\4\3\2\2\2\'(\7/\2\2(\6\3\2\2\2"+
 		")*\7,\2\2*\b\3\2\2\2+,\7\61\2\2,\n\3\2\2\2-.\7\'\2\2.\f\3\2\2\2/\60\7"+
 		"}\2\2\60\16\3\2\2\2\61\62\7\177\2\2\62\20\3\2\2\2\63\64\7*\2\2\64\22\3"+
