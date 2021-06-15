@@ -1,162 +1,1332 @@
-// Generated from Trago.g by ANTLR 4.5.3
+// $ANTLR 3.5.2 Trago.g 2021-06-15 12:58:16
 
-    //import java.util.ArrayList;
+import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
-import org.antlr.v4.runtime.Lexer;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.Token;
-import org.antlr.v4.runtime.TokenStream;
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.*;
-import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.misc.*;
-
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings("all")
 public class TragoLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
+	public static final int EOF=-1;
+	public static final int T__22=22;
+	public static final int T__23=23;
+	public static final int T__24=24;
+	public static final int T__25=25;
+	public static final int T__26=26;
+	public static final int T__27=27;
+	public static final int T__28=28;
+	public static final int T__29=29;
+	public static final int T__30=30;
+	public static final int T__31=31;
+	public static final int T__32=32;
+	public static final int T__33=33;
+	public static final int CHAR=4;
+	public static final int COMMENT=5;
+	public static final int ELSE=6;
+	public static final int EscapeSequence=7;
+	public static final int FLOAT=8;
+	public static final int FOR=9;
+	public static final int Floating_point_constant=10;
+	public static final int IF=11;
+	public static final int INT=12;
+	public static final int Identifier=13;
+	public static final int Integer_constant=14;
+	public static final int MAIN=15;
+	public static final int PRINTF=16;
+	public static final int RelationOP=17;
+	public static final int STRING_LITERAL=18;
+	public static final int VOID=19;
+	public static final int WHILE=20;
+	public static final int WS=21;
 
-	protected static final DFA[] _decisionToDFA;
-	protected static final PredictionContextCache _sharedContextCache =
-		new PredictionContextCache();
-	public static final int
-		PLUS=1, MINUS=2, TIMES=3, OVER=4, REMAINDER=5, OPEN_C=6, CLOSE_C=7, OPEN_P=8, 
-		CLOSE_P=9, ATTRIB=10, FUNC=11, MAIN=12, PRINT=13, VAR=14, NUM=15, NL=16, 
-		SPACE=17;
-	public static String[] modeNames = {
-		"DEFAULT_MODE"
-	};
-
-	public static final String[] ruleNames = {
-		"PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", "OPEN_P", 
-		"CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", "NL", "SPACE"
-	};
-
-	private static final String[] _LITERAL_NAMES = {
-		null, "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", "'='", 
-		"'vai'", "'boteco'", "'mijo'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "PLUS", "MINUS", "TIMES", "OVER", "REMAINDER", "OPEN_C", "CLOSE_C", 
-		"OPEN_P", "CLOSE_P", "ATTRIB", "FUNC", "MAIN", "PRINT", "VAR", "NUM", 
-		"NL", "SPACE"
-	};
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
-	static {
-		tokenNames = new String[_SYMBOLIC_NAMES.length];
-		for (int i = 0; i < tokenNames.length; i++) {
-			tokenNames[i] = VOCABULARY.getLiteralName(i);
-			if (tokenNames[i] == null) {
-				tokenNames[i] = VOCABULARY.getSymbolicName(i);
-			}
-
-			if (tokenNames[i] == null) {
-				tokenNames[i] = "<INVALID>";
-			}
-		}
+	// delegates
+	// delegators
+	public Lexer[] getDelegates() {
+		return new Lexer[] {};
 	}
 
-	@Override
-	@Deprecated
-	public String[] getTokenNames() {
-		return tokenNames;
-	}
-
-	@Override
-
-	public Vocabulary getVocabulary() {
-		return VOCABULARY;
-	}
-
-
-	    //private static ArrayList<String> symbol_table;
-
-	    public static void main(String[] args) throws Exception
-	    {
-	        ANTLRInputStream input = new ANTLRInputStream(System.in);
-	        TragoLexer lexer = new TragoLexer(input);
-	        CommonTokenStream tokens = new CommonTokenStream(lexer);
-	        TragoParser parser = new TragoParser(tokens);
-
-	        //symbol_table = new ArrayList<String>();        
-	        parser.program();
-	        //System.out.println("symbols: " + symbol_table);
-	    }
-
-
+	public TragoLexer() {} 
 	public TragoLexer(CharStream input) {
-		super(input);
-		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
+		this(input, new RecognizerSharedState());
 	}
+	public TragoLexer(CharStream input, RecognizerSharedState state) {
+		super(input,state);
+	}
+	@Override public String getGrammarFileName() { return "Trago.g"; }
 
-	@Override
-	public String getGrammarFileName() { return "Trago.g"; }
+	// $ANTLR start "T__22"
+	public final void mT__22() throws RecognitionException {
+		try {
+			int _type = T__22;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:2:7: ( '&' )
+			// Trago.g:2:9: '&'
+			{
+			match('&'); 
+			}
 
-	@Override
-	public String[] getRuleNames() { return ruleNames; }
-
-	@Override
-	public String getSerializedATN() { return _serializedATN; }
-
-	@Override
-	public String[] getModeNames() { return modeNames; }
-
-	@Override
-	public ATN getATN() { return _ATN; }
-
-	@Override
-	public void action(RuleContext _localctx, int ruleIndex, int actionIndex) {
-		switch (ruleIndex) {
-		case 16:
-			SPACE_action((RuleContext)_localctx, actionIndex);
-			break;
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
 		}
 	}
-	private void SPACE_action(RuleContext _localctx, int actionIndex) {
-		switch (actionIndex) {
-		case 0:
-			 skip(); 
-			break;
+	// $ANTLR end "T__22"
+
+	// $ANTLR start "T__23"
+	public final void mT__23() throws RecognitionException {
+		try {
+			int _type = T__23;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:3:7: ( '(' )
+			// Trago.g:3:9: '('
+			{
+			match('('); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__23"
+
+	// $ANTLR start "T__24"
+	public final void mT__24() throws RecognitionException {
+		try {
+			int _type = T__24;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:4:7: ( ')' )
+			// Trago.g:4:9: ')'
+			{
+			match(')'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__24"
+
+	// $ANTLR start "T__25"
+	public final void mT__25() throws RecognitionException {
+		try {
+			int _type = T__25;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:5:7: ( '*' )
+			// Trago.g:5:9: '*'
+			{
+			match('*'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__25"
+
+	// $ANTLR start "T__26"
+	public final void mT__26() throws RecognitionException {
+		try {
+			int _type = T__26;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:6:7: ( '+' )
+			// Trago.g:6:9: '+'
+			{
+			match('+'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__26"
+
+	// $ANTLR start "T__27"
+	public final void mT__27() throws RecognitionException {
+		try {
+			int _type = T__27;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:7:7: ( ',' )
+			// Trago.g:7:9: ','
+			{
+			match(','); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__27"
+
+	// $ANTLR start "T__28"
+	public final void mT__28() throws RecognitionException {
+		try {
+			int _type = T__28;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:8:7: ( '-' )
+			// Trago.g:8:9: '-'
+			{
+			match('-'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__28"
+
+	// $ANTLR start "T__29"
+	public final void mT__29() throws RecognitionException {
+		try {
+			int _type = T__29;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:9:7: ( '/' )
+			// Trago.g:9:9: '/'
+			{
+			match('/'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__29"
+
+	// $ANTLR start "T__30"
+	public final void mT__30() throws RecognitionException {
+		try {
+			int _type = T__30;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:10:7: ( ';' )
+			// Trago.g:10:9: ';'
+			{
+			match(';'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__30"
+
+	// $ANTLR start "T__31"
+	public final void mT__31() throws RecognitionException {
+		try {
+			int _type = T__31;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:11:7: ( '=' )
+			// Trago.g:11:9: '='
+			{
+			match('='); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__31"
+
+	// $ANTLR start "T__32"
+	public final void mT__32() throws RecognitionException {
+		try {
+			int _type = T__32;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:12:7: ( '{' )
+			// Trago.g:12:9: '{'
+			{
+			match('{'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__32"
+
+	// $ANTLR start "T__33"
+	public final void mT__33() throws RecognitionException {
+		try {
+			int _type = T__33;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:13:7: ( '}' )
+			// Trago.g:13:9: '}'
+			{
+			match('}'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__33"
+
+	// $ANTLR start "FLOAT"
+	public final void mFLOAT() throws RecognitionException {
+		try {
+			int _type = FLOAT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:509:6: ( 'float' )
+			// Trago.g:509:7: 'float'
+			{
+			match("float"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "FLOAT"
+
+	// $ANTLR start "INT"
+	public final void mINT() throws RecognitionException {
+		try {
+			int _type = INT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:510:4: ( 'ceva' )
+			// Trago.g:510:5: 'ceva'
+			{
+			match("ceva"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "INT"
+
+	// $ANTLR start "CHAR"
+	public final void mCHAR() throws RecognitionException {
+		try {
+			int _type = CHAR;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:511:5: ( 'martelihno' )
+			// Trago.g:511:7: 'martelihno'
+			{
+			match("martelihno"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "CHAR"
+
+	// $ANTLR start "MAIN"
+	public final void mMAIN() throws RecognitionException {
+		try {
+			int _type = MAIN;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:512:5: ( 'boteco' )
+			// Trago.g:512:7: 'boteco'
+			{
+			match("boteco"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "MAIN"
+
+	// $ANTLR start "VOID"
+	public final void mVOID() throws RecognitionException {
+		try {
+			int _type = VOID;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:513:5: ( 'agua' )
+			// Trago.g:513:7: 'agua'
+			{
+			match("agua"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "VOID"
+
+	// $ANTLR start "IF"
+	public final void mIF() throws RecognitionException {
+		try {
+			int _type = IF;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:514:3: ( 'beber?' )
+			// Trago.g:514:5: 'beber?'
+			{
+			match("beber?"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "IF"
+
+	// $ANTLR start "ELSE"
+	public final void mELSE() throws RecognitionException {
+		try {
+			int _type = ELSE;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:515:5: ( 'nao' )
+			// Trago.g:515:7: 'nao'
+			{
+			match("nao"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "ELSE"
+
+	// $ANTLR start "FOR"
+	public final void mFOR() throws RecognitionException {
+		try {
+			int _type = FOR;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:516:4: ( 'for' )
+			// Trago.g:516:6: 'for'
+			{
+			match("for"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "FOR"
+
+	// $ANTLR start "WHILE"
+	public final void mWHILE() throws RecognitionException {
+		try {
+			int _type = WHILE;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:517:6: ( 'bebendo' )
+			// Trago.g:517:8: 'bebendo'
+			{
+			match("bebendo"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "WHILE"
+
+	// $ANTLR start "PRINTF"
+	public final void mPRINTF() throws RecognitionException {
+		try {
+			int _type = PRINTF;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:518:7: ( 'mijo' )
+			// Trago.g:518:8: 'mijo'
+			{
+			match("mijo"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "PRINTF"
+
+	// $ANTLR start "RelationOP"
+	public final void mRelationOP() throws RecognitionException {
+		try {
+			int _type = RelationOP;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:519:11: ( '>' | '>=' | '<' | '<=' | '==' | '!=' )
+			int alt1=6;
+			switch ( input.LA(1) ) {
+			case '>':
+				{
+				int LA1_1 = input.LA(2);
+				if ( (LA1_1=='=') ) {
+					alt1=2;
+				}
+
+				else {
+					alt1=1;
+				}
+
+				}
+				break;
+			case '<':
+				{
+				int LA1_2 = input.LA(2);
+				if ( (LA1_2=='=') ) {
+					alt1=4;
+				}
+
+				else {
+					alt1=3;
+				}
+
+				}
+				break;
+			case '=':
+				{
+				alt1=5;
+				}
+				break;
+			case '!':
+				{
+				alt1=6;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 1, 0, input);
+				throw nvae;
+			}
+			switch (alt1) {
+				case 1 :
+					// Trago.g:519:13: '>'
+					{
+					match('>'); 
+					}
+					break;
+				case 2 :
+					// Trago.g:519:18: '>='
+					{
+					match(">="); 
+
+					}
+					break;
+				case 3 :
+					// Trago.g:519:25: '<'
+					{
+					match('<'); 
+					}
+					break;
+				case 4 :
+					// Trago.g:519:31: '<='
+					{
+					match("<="); 
+
+					}
+					break;
+				case 5 :
+					// Trago.g:519:38: '=='
+					{
+					match("=="); 
+
+					}
+					break;
+				case 6 :
+					// Trago.g:519:45: '!='
+					{
+					match("!="); 
+
+					}
+					break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "RelationOP"
+
+	// $ANTLR start "Identifier"
+	public final void mIdentifier() throws RecognitionException {
+		try {
+			int _type = Identifier;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:520:11: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// Trago.g:520:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			{
+			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			// Trago.g:520:36: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			loop2:
+			while (true) {
+				int alt2=2;
+				int LA2_0 = input.LA(1);
+				if ( ((LA2_0 >= '0' && LA2_0 <= '9')||(LA2_0 >= 'A' && LA2_0 <= 'Z')||LA2_0=='_'||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
+					alt2=1;
+				}
+
+				switch (alt2) {
+				case 1 :
+					// Trago.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop2;
+				}
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "Identifier"
+
+	// $ANTLR start "Integer_constant"
+	public final void mInteger_constant() throws RecognitionException {
+		try {
+			int _type = Integer_constant;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:521:17: ( ( '0' .. '9' )+ )
+			// Trago.g:521:18: ( '0' .. '9' )+
+			{
+			// Trago.g:521:18: ( '0' .. '9' )+
+			int cnt3=0;
+			loop3:
+			while (true) {
+				int alt3=2;
+				int LA3_0 = input.LA(1);
+				if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
+					alt3=1;
+				}
+
+				switch (alt3) {
+				case 1 :
+					// Trago.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt3 >= 1 ) break loop3;
+					EarlyExitException eee = new EarlyExitException(3, input);
+					throw eee;
+				}
+				cnt3++;
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "Integer_constant"
+
+	// $ANTLR start "Floating_point_constant"
+	public final void mFloating_point_constant() throws RecognitionException {
+		try {
+			int _type = Floating_point_constant;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:522:24: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+			// Trago.g:522:25: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+			{
+			// Trago.g:522:25: ( '0' .. '9' )+
+			int cnt4=0;
+			loop4:
+			while (true) {
+				int alt4=2;
+				int LA4_0 = input.LA(1);
+				if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
+					alt4=1;
+				}
+
+				switch (alt4) {
+				case 1 :
+					// Trago.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt4 >= 1 ) break loop4;
+					EarlyExitException eee = new EarlyExitException(4, input);
+					throw eee;
+				}
+				cnt4++;
+			}
+
+			match('.'); 
+			// Trago.g:522:39: ( '0' .. '9' )+
+			int cnt5=0;
+			loop5:
+			while (true) {
+				int alt5=2;
+				int LA5_0 = input.LA(1);
+				if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
+					alt5=1;
+				}
+
+				switch (alt5) {
+				case 1 :
+					// Trago.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt5 >= 1 ) break loop5;
+					EarlyExitException eee = new EarlyExitException(5, input);
+					throw eee;
+				}
+				cnt5++;
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "Floating_point_constant"
+
+	// $ANTLR start "STRING_LITERAL"
+	public final void mSTRING_LITERAL() throws RecognitionException {
+		try {
+			int _type = STRING_LITERAL;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:524:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
+			// Trago.g:524:8: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
+			{
+			match('\"'); 
+			// Trago.g:524:12: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
+			loop6:
+			while (true) {
+				int alt6=3;
+				int LA6_0 = input.LA(1);
+				if ( (LA6_0=='\\') ) {
+					alt6=1;
+				}
+				else if ( ((LA6_0 >= '\u0000' && LA6_0 <= '!')||(LA6_0 >= '#' && LA6_0 <= '[')||(LA6_0 >= ']' && LA6_0 <= '\uFFFF')) ) {
+					alt6=2;
+				}
+
+				switch (alt6) {
+				case 1 :
+					// Trago.g:524:14: EscapeSequence
+					{
+					mEscapeSequence(); 
+
+					}
+					break;
+				case 2 :
+					// Trago.g:524:31: ~ ( '\\\\' | '\"' )
+					{
+					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop6;
+				}
+			}
+
+			match('\"'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "STRING_LITERAL"
+
+	// $ANTLR start "WS"
+	public final void mWS() throws RecognitionException {
+		try {
+			int _type = WS;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:526:3: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// Trago.g:526:4: ( ' ' | '\\t' | '\\r' | '\\n' )
+			{
+			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			_channel=HIDDEN;
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "WS"
+
+	// $ANTLR start "COMMENT"
+	public final void mCOMMENT() throws RecognitionException {
+		try {
+			int _type = COMMENT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Trago.g:527:8: ( '/*' ( . )* '*/' )
+			// Trago.g:527:9: '/*' ( . )* '*/'
+			{
+			match("/*"); 
+
+			// Trago.g:527:14: ( . )*
+			loop7:
+			while (true) {
+				int alt7=2;
+				int LA7_0 = input.LA(1);
+				if ( (LA7_0=='*') ) {
+					int LA7_1 = input.LA(2);
+					if ( (LA7_1=='/') ) {
+						alt7=2;
+					}
+					else if ( ((LA7_1 >= '\u0000' && LA7_1 <= '.')||(LA7_1 >= '0' && LA7_1 <= '\uFFFF')) ) {
+						alt7=1;
+					}
+
+				}
+				else if ( ((LA7_0 >= '\u0000' && LA7_0 <= ')')||(LA7_0 >= '+' && LA7_0 <= '\uFFFF')) ) {
+					alt7=1;
+				}
+
+				switch (alt7) {
+				case 1 :
+					// Trago.g:527:14: .
+					{
+					matchAny(); 
+					}
+					break;
+
+				default :
+					break loop7;
+				}
+			}
+
+			match("*/"); 
+
+
+			    _channel=HIDDEN;
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "COMMENT"
+
+	// $ANTLR start "EscapeSequence"
+	public final void mEscapeSequence() throws RecognitionException {
+		try {
+			// Trago.g:532:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+			// Trago.g:532:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+			{
+			match('\\'); 
+			if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			}
+
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "EscapeSequence"
+
+	@Override
+	public void mTokens() throws RecognitionException {
+		// Trago.g:1:8: ( T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | FLOAT | INT | CHAR | MAIN | VOID | IF | ELSE | FOR | WHILE | PRINTF | RelationOP | Identifier | Integer_constant | Floating_point_constant | STRING_LITERAL | WS | COMMENT )
+		int alt8=29;
+		alt8 = dfa8.predict(input);
+		switch (alt8) {
+			case 1 :
+				// Trago.g:1:10: T__22
+				{
+				mT__22(); 
+
+				}
+				break;
+			case 2 :
+				// Trago.g:1:16: T__23
+				{
+				mT__23(); 
+
+				}
+				break;
+			case 3 :
+				// Trago.g:1:22: T__24
+				{
+				mT__24(); 
+
+				}
+				break;
+			case 4 :
+				// Trago.g:1:28: T__25
+				{
+				mT__25(); 
+
+				}
+				break;
+			case 5 :
+				// Trago.g:1:34: T__26
+				{
+				mT__26(); 
+
+				}
+				break;
+			case 6 :
+				// Trago.g:1:40: T__27
+				{
+				mT__27(); 
+
+				}
+				break;
+			case 7 :
+				// Trago.g:1:46: T__28
+				{
+				mT__28(); 
+
+				}
+				break;
+			case 8 :
+				// Trago.g:1:52: T__29
+				{
+				mT__29(); 
+
+				}
+				break;
+			case 9 :
+				// Trago.g:1:58: T__30
+				{
+				mT__30(); 
+
+				}
+				break;
+			case 10 :
+				// Trago.g:1:64: T__31
+				{
+				mT__31(); 
+
+				}
+				break;
+			case 11 :
+				// Trago.g:1:70: T__32
+				{
+				mT__32(); 
+
+				}
+				break;
+			case 12 :
+				// Trago.g:1:76: T__33
+				{
+				mT__33(); 
+
+				}
+				break;
+			case 13 :
+				// Trago.g:1:82: FLOAT
+				{
+				mFLOAT(); 
+
+				}
+				break;
+			case 14 :
+				// Trago.g:1:88: INT
+				{
+				mINT(); 
+
+				}
+				break;
+			case 15 :
+				// Trago.g:1:92: CHAR
+				{
+				mCHAR(); 
+
+				}
+				break;
+			case 16 :
+				// Trago.g:1:97: MAIN
+				{
+				mMAIN(); 
+
+				}
+				break;
+			case 17 :
+				// Trago.g:1:102: VOID
+				{
+				mVOID(); 
+
+				}
+				break;
+			case 18 :
+				// Trago.g:1:107: IF
+				{
+				mIF(); 
+
+				}
+				break;
+			case 19 :
+				// Trago.g:1:110: ELSE
+				{
+				mELSE(); 
+
+				}
+				break;
+			case 20 :
+				// Trago.g:1:115: FOR
+				{
+				mFOR(); 
+
+				}
+				break;
+			case 21 :
+				// Trago.g:1:119: WHILE
+				{
+				mWHILE(); 
+
+				}
+				break;
+			case 22 :
+				// Trago.g:1:125: PRINTF
+				{
+				mPRINTF(); 
+
+				}
+				break;
+			case 23 :
+				// Trago.g:1:132: RelationOP
+				{
+				mRelationOP(); 
+
+				}
+				break;
+			case 24 :
+				// Trago.g:1:143: Identifier
+				{
+				mIdentifier(); 
+
+				}
+				break;
+			case 25 :
+				// Trago.g:1:154: Integer_constant
+				{
+				mInteger_constant(); 
+
+				}
+				break;
+			case 26 :
+				// Trago.g:1:171: Floating_point_constant
+				{
+				mFloating_point_constant(); 
+
+				}
+				break;
+			case 27 :
+				// Trago.g:1:195: STRING_LITERAL
+				{
+				mSTRING_LITERAL(); 
+
+				}
+				break;
+			case 28 :
+				// Trago.g:1:210: WS
+				{
+				mWS(); 
+
+				}
+				break;
+			case 29 :
+				// Trago.g:1:213: COMMENT
+				{
+				mCOMMENT(); 
+
+				}
+				break;
+
 		}
 	}
 
-	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\2\23_\b\1\4\2\t\2\4"+
-		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
-		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
-		"\3\2\3\2\3\3\3\3\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\b\3\b\3\t\3\t\3\n\3"+
-		"\n\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\16\3\16\3\16"+
-		"\3\16\3\16\3\17\6\17K\n\17\r\17\16\17L\3\20\6\20P\n\20\r\20\16\20Q\3\21"+
-		"\5\21U\n\21\3\21\3\21\3\22\6\22Z\n\22\r\22\16\22[\3\22\3\22\2\2\23\3\3"+
-		"\5\4\7\5\t\6\13\7\r\b\17\t\21\n\23\13\25\f\27\r\31\16\33\17\35\20\37\21"+
-		"!\22#\23\3\2\3\4\2\13\13\"\"b\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2\2\t"+
-		"\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2\2"+
-		"\2\2\25\3\2\2\2\2\27\3\2\2\2\2\31\3\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2\2"+
-		"\37\3\2\2\2\2!\3\2\2\2\2#\3\2\2\2\3%\3\2\2\2\5\'\3\2\2\2\7)\3\2\2\2\t"+
-		"+\3\2\2\2\13-\3\2\2\2\r/\3\2\2\2\17\61\3\2\2\2\21\63\3\2\2\2\23\65\3\2"+
-		"\2\2\25\67\3\2\2\2\279\3\2\2\2\31=\3\2\2\2\33D\3\2\2\2\35J\3\2\2\2\37"+
-		"O\3\2\2\2!T\3\2\2\2#Y\3\2\2\2%&\7-\2\2&\4\3\2\2\2\'(\7/\2\2(\6\3\2\2\2"+
-		")*\7,\2\2*\b\3\2\2\2+,\7\61\2\2,\n\3\2\2\2-.\7\'\2\2.\f\3\2\2\2/\60\7"+
-		"}\2\2\60\16\3\2\2\2\61\62\7\177\2\2\62\20\3\2\2\2\63\64\7*\2\2\64\22\3"+
-		"\2\2\2\65\66\7+\2\2\66\24\3\2\2\2\678\7?\2\28\26\3\2\2\29:\7x\2\2:;\7"+
-		"c\2\2;<\7k\2\2<\30\3\2\2\2=>\7d\2\2>?\7q\2\2?@\7v\2\2@A\7g\2\2AB\7e\2"+
-		"\2BC\7q\2\2C\32\3\2\2\2DE\7o\2\2EF\7k\2\2FG\7l\2\2GH\7q\2\2H\34\3\2\2"+
-		"\2IK\4c|\2JI\3\2\2\2KL\3\2\2\2LJ\3\2\2\2LM\3\2\2\2M\36\3\2\2\2NP\4\62"+
-		";\2ON\3\2\2\2PQ\3\2\2\2QO\3\2\2\2QR\3\2\2\2R \3\2\2\2SU\7\17\2\2TS\3\2"+
-		"\2\2TU\3\2\2\2UV\3\2\2\2VW\7\f\2\2W\"\3\2\2\2XZ\t\2\2\2YX\3\2\2\2Z[\3"+
-		"\2\2\2[Y\3\2\2\2[\\\3\2\2\2\\]\3\2\2\2]^\b\22\2\2^$\3\2\2\2\7\2LQT[\3"+
-		"\3\22\2";
-	public static final ATN _ATN =
-		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
+
+	protected DFA8 dfa8 = new DFA8(this);
+	static final String DFA8_eotS =
+		"\10\uffff\1\31\1\uffff\1\32\2\uffff\6\24\2\uffff\1\44\5\uffff\11\24\2"+
+		"\uffff\1\24\1\60\6\24\1\67\1\24\1\uffff\1\71\1\24\1\73\2\24\1\77\1\uffff"+
+		"\1\100\1\uffff\1\24\1\uffff\3\24\2\uffff\1\24\1\106\1\uffff\2\24\1\uffff"+
+		"\1\111\1\24\1\uffff\1\24\1\114\1\uffff";
+	static final String DFA8_eofS =
+		"\115\uffff";
+	static final String DFA8_minS =
+		"\1\11\7\uffff\1\52\1\uffff\1\75\2\uffff\1\154\1\145\1\141\1\145\1\147"+
+		"\1\141\2\uffff\1\56\5\uffff\1\157\1\162\1\166\1\162\1\152\1\164\1\142"+
+		"\1\165\1\157\2\uffff\1\141\1\60\1\141\1\164\1\157\2\145\1\141\1\60\1\164"+
+		"\1\uffff\1\60\1\145\1\60\1\143\1\156\1\60\1\uffff\1\60\1\uffff\1\154\1"+
+		"\uffff\1\157\1\77\1\144\2\uffff\1\151\1\60\1\uffff\1\157\1\150\1\uffff"+
+		"\1\60\1\156\1\uffff\1\157\1\60\1\uffff";
+	static final String DFA8_maxS =
+		"\1\175\7\uffff\1\52\1\uffff\1\75\2\uffff\1\157\1\145\1\151\1\157\1\147"+
+		"\1\141\2\uffff\1\71\5\uffff\1\157\1\162\1\166\1\162\1\152\1\164\1\142"+
+		"\1\165\1\157\2\uffff\1\141\1\172\1\141\1\164\1\157\2\145\1\141\1\172\1"+
+		"\164\1\uffff\1\172\1\145\1\172\1\143\1\162\1\172\1\uffff\1\172\1\uffff"+
+		"\1\154\1\uffff\1\157\1\77\1\144\2\uffff\1\151\1\172\1\uffff\1\157\1\150"+
+		"\1\uffff\1\172\1\156\1\uffff\1\157\1\172\1\uffff";
+	static final String DFA8_acceptS =
+		"\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\uffff\1\11\1\uffff\1\13\1\14\6"+
+		"\uffff\1\27\1\30\1\uffff\1\33\1\34\1\35\1\10\1\12\11\uffff\1\31\1\32\12"+
+		"\uffff\1\24\6\uffff\1\23\1\uffff\1\16\1\uffff\1\26\3\uffff\1\21\1\15\2"+
+		"\uffff\1\22\2\uffff\1\20\2\uffff\1\25\2\uffff\1\17";
+	static final String DFA8_specialS =
+		"\115\uffff}>";
+	static final String[] DFA8_transitionS = {
+			"\2\27\2\uffff\1\27\22\uffff\1\27\1\23\1\26\3\uffff\1\1\1\uffff\1\2\1"+
+			"\3\1\4\1\5\1\6\1\7\1\uffff\1\10\12\25\1\uffff\1\11\1\23\1\12\1\23\2\uffff"+
+			"\32\24\4\uffff\1\24\1\uffff\1\21\1\20\1\16\2\24\1\15\6\24\1\17\1\22\14"+
+			"\24\1\13\1\uffff\1\14",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\30",
+			"",
+			"\1\23",
+			"",
+			"",
+			"\1\33\2\uffff\1\34",
+			"\1\35",
+			"\1\36\7\uffff\1\37",
+			"\1\41\11\uffff\1\40",
+			"\1\42",
+			"\1\43",
+			"",
+			"",
+			"\1\45\1\uffff\12\25",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\46",
+			"\1\47",
+			"\1\50",
+			"\1\51",
+			"\1\52",
+			"\1\53",
+			"\1\54",
+			"\1\55",
+			"\1\56",
+			"",
+			"",
+			"\1\57",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"\1\61",
+			"\1\62",
+			"\1\63",
+			"\1\64",
+			"\1\65",
+			"\1\66",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"\1\70",
+			"",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"\1\72",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"\1\74",
+			"\1\76\3\uffff\1\75",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"",
+			"\1\101",
+			"",
+			"\1\102",
+			"\1\103",
+			"\1\104",
+			"",
+			"",
+			"\1\105",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"",
+			"\1\107",
+			"\1\110",
+			"",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			"\1\112",
+			"",
+			"\1\113",
+			"\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+			""
+	};
+
+	static final short[] DFA8_eot = DFA.unpackEncodedString(DFA8_eotS);
+	static final short[] DFA8_eof = DFA.unpackEncodedString(DFA8_eofS);
+	static final char[] DFA8_min = DFA.unpackEncodedStringToUnsignedChars(DFA8_minS);
+	static final char[] DFA8_max = DFA.unpackEncodedStringToUnsignedChars(DFA8_maxS);
+	static final short[] DFA8_accept = DFA.unpackEncodedString(DFA8_acceptS);
+	static final short[] DFA8_special = DFA.unpackEncodedString(DFA8_specialS);
+	static final short[][] DFA8_transition;
+
 	static {
-		_decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
-		for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
-			_decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
+		int numStates = DFA8_transitionS.length;
+		DFA8_transition = new short[numStates][];
+		for (int i=0; i<numStates; i++) {
+			DFA8_transition[i] = DFA.unpackEncodedString(DFA8_transitionS[i]);
 		}
 	}
+
+	protected class DFA8 extends DFA {
+
+		public DFA8(BaseRecognizer recognizer) {
+			this.recognizer = recognizer;
+			this.decisionNumber = 8;
+			this.eot = DFA8_eot;
+			this.eof = DFA8_eof;
+			this.min = DFA8_min;
+			this.max = DFA8_max;
+			this.accept = DFA8_accept;
+			this.special = DFA8_special;
+			this.transition = DFA8_transition;
+		}
+		@Override
+		public String getDescription() {
+			return "1:1: Tokens : ( T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | FLOAT | INT | CHAR | MAIN | VOID | IF | ELSE | FOR | WHILE | PRINTF | RelationOP | Identifier | Integer_constant | Floating_point_constant | STRING_LITERAL | WS | COMMENT );";
+		}
+	}
+
 }

@@ -1,4 +1,4 @@
-// Generated from c:\Users\Elias\Documents\tragoLang\Trago.g by ANTLR 4.8
+// Generated from c:\Users\Elias\Documents\tragoLang\Trago_old.g by ANTLR 4.8
 
     //import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class TragoParser extends Parser {
+public class Trago_oldParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -82,7 +82,7 @@ public class TragoParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Trago.g"; }
+	public String getGrammarFileName() { return "Trago_old.g"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -112,7 +112,7 @@ public class TragoParser extends Parser {
 	        //System.out.println("symbols: " + symbol_table);
 	    }
 
-	public TragoParser(TokenStream input) {
+	public Trago_oldParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -149,13 +149,13 @@ public class TragoParser extends Parser {
 	}
 
 	public static class MainContext extends ParserRuleContext {
-		public TerminalNode FUNC() { return getToken(TragoParser.FUNC, 0); }
-		public TerminalNode MAIN() { return getToken(TragoParser.MAIN, 0); }
-		public TerminalNode OPEN_P() { return getToken(TragoParser.OPEN_P, 0); }
-		public TerminalNode CLOSE_P() { return getToken(TragoParser.CLOSE_P, 0); }
-		public TerminalNode OPEN_C() { return getToken(TragoParser.OPEN_C, 0); }
-		public TerminalNode CLOSE_C() { return getToken(TragoParser.CLOSE_C, 0); }
-		public TerminalNode NL() { return getToken(TragoParser.NL, 0); }
+		public TerminalNode FUNC() { return getToken(Trago_oldParser.FUNC, 0); }
+		public TerminalNode MAIN() { return getToken(Trago_oldParser.MAIN, 0); }
+		public TerminalNode OPEN_P() { return getToken(Trago_oldParser.OPEN_P, 0); }
+		public TerminalNode CLOSE_P() { return getToken(Trago_oldParser.CLOSE_P, 0); }
+		public TerminalNode OPEN_C() { return getToken(Trago_oldParser.OPEN_C, 0); }
+		public TerminalNode CLOSE_C() { return getToken(Trago_oldParser.CLOSE_C, 0); }
+		public TerminalNode NL() { return getToken(Trago_oldParser.NL, 0); }
 		public List<StatementContext> statement() {
 			return getRuleContexts(StatementContext.class);
 		}
@@ -246,13 +246,13 @@ public class TragoParser extends Parser {
 	}
 
 	public static class StatementContext extends ParserRuleContext {
-		public TerminalNode NL() { return getToken(TragoParser.NL, 0); }
-		public TerminalNode PRINT() { return getToken(TragoParser.PRINT, 0); }
-		public TerminalNode OPEN_P() { return getToken(TragoParser.OPEN_P, 0); }
+		public TerminalNode NL() { return getToken(Trago_oldParser.NL, 0); }
+		public TerminalNode PRINT() { return getToken(Trago_oldParser.PRINT, 0); }
+		public TerminalNode OPEN_P() { return getToken(Trago_oldParser.OPEN_P, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode CLOSE_P() { return getToken(TragoParser.CLOSE_P, 0); }
+		public TerminalNode CLOSE_P() { return getToken(Trago_oldParser.CLOSE_P, 0); }
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -317,13 +317,13 @@ public class TragoParser extends Parser {
 		public TermContext term(int i) {
 			return getRuleContext(TermContext.class,i);
 		}
-		public List<TerminalNode> PLUS() { return getTokens(TragoParser.PLUS); }
+		public List<TerminalNode> PLUS() { return getTokens(Trago_oldParser.PLUS); }
 		public TerminalNode PLUS(int i) {
-			return getToken(TragoParser.PLUS, i);
+			return getToken(Trago_oldParser.PLUS, i);
 		}
-		public List<TerminalNode> MINUS() { return getTokens(TragoParser.MINUS); }
+		public List<TerminalNode> MINUS() { return getTokens(Trago_oldParser.MINUS); }
 		public TerminalNode MINUS(int i) {
-			return getToken(TragoParser.MINUS, i);
+			return getToken(Trago_oldParser.MINUS, i);
 		}
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -389,13 +389,13 @@ public class TragoParser extends Parser {
 		public FactorContext factor(int i) {
 			return getRuleContext(FactorContext.class,i);
 		}
-		public List<TerminalNode> TIMES() { return getTokens(TragoParser.TIMES); }
+		public List<TerminalNode> TIMES() { return getTokens(Trago_oldParser.TIMES); }
 		public TerminalNode TIMES(int i) {
-			return getToken(TragoParser.TIMES, i);
+			return getToken(Trago_oldParser.TIMES, i);
 		}
-		public List<TerminalNode> OVER() { return getTokens(TragoParser.OVER); }
+		public List<TerminalNode> OVER() { return getTokens(Trago_oldParser.OVER); }
 		public TerminalNode OVER(int i) {
-			return getToken(TragoParser.OVER, i);
+			return getToken(Trago_oldParser.OVER, i);
 		}
 		public TermContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -455,12 +455,12 @@ public class TragoParser extends Parser {
 
 	public static class FactorContext extends ParserRuleContext {
 		public Token NUM;
-		public TerminalNode NUM() { return getToken(TragoParser.NUM, 0); }
-		public TerminalNode OPEN_P() { return getToken(TragoParser.OPEN_P, 0); }
+		public TerminalNode NUM() { return getToken(Trago_oldParser.NUM, 0); }
+		public TerminalNode OPEN_P() { return getToken(Trago_oldParser.OPEN_P, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode CLOSE_P() { return getToken(TragoParser.CLOSE_P, 0); }
+		public TerminalNode CLOSE_P() { return getToken(Trago_oldParser.CLOSE_P, 0); }
 		public FactorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}

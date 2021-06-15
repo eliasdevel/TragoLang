@@ -1,5 +1,19 @@
-vai boteco() {
+agua boteco()
+{
+   ceva a;
+   
+   a=0;
 
-  mijo(2+3)
+   bebendo(a < 10){
+   	mijo("entrou");
+      a = a + 1;
 
-}
+      beber?(a > 5)
+      {
+         mijo("a maior q 5");
+      }nao{
+         mijo("a menor q 5");
+      }
+   } 
+
+}   

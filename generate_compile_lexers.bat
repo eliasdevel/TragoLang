@@ -1,11 +1,11 @@
-java -jar antlr-4.5.3.jar Trago.g
-javac -cp antlr-4.5.3.jar Trago*.java 
+java -jar antlr-3.5.2-complete.jar Trago.g
+javac -cp antlr-3.5.2-complete.jar Trago*.java 
 
-SET CLASSPATH=.;antlr-4.5.3.jar;%CLASSPATH%
+SET CLASSPATH=.;antlr-3.5.2-complete.jar;%CLASSPATH%
 
 doskey antlr4=java org.antlr.v4.Tool $*
-doskey grun =java org.antlr.v4.gui.TestRig $*
 
+java TragoParser < Test.trago
 
 java TragoParser < Test.trago > Test.j
 
