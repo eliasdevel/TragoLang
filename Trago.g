@@ -506,7 +506,7 @@ returns [Type attr_type]
            ;
 		   
 /* description of the tokens */
-FLOAT:'float';
+FLOAT:'caipira';
 INT:'ceva';
 CHAR: 'martelihno';
 MAIN: 'boteco';
