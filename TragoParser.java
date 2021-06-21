@@ -1,8 +1,9 @@
-// $ANTLR 3.5.2 Trago.g 2021-06-15 13:50:51
+// $ANTLR 3.5.2 Trago.g 2021-06-21 16:33:58
 
     // import packages here.
     import java.util.HashMap;
     import java.util.ArrayList;
+    import java.io.*;
 
 
 import org.antlr.runtime.*;
@@ -70,6 +71,8 @@ public class TragoParser extends Parser {
 	@Override public String getGrammarFileName() { return "Trago.g"; }
 
 
+
+	 
 	    public static void prn(String str){
 	        System.out.println(str);
 	    }
@@ -157,11 +160,11 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "program"
-	// Trago.g:96:1: program : VOID MAIN '(' ')' '{' declarations statements '}' ;
+	// Trago.g:99:1: program : VOID MAIN '(' ')' '{' declarations statements '}' ;
 	public final void program() throws RecognitionException {
 		try {
-			// Trago.g:96:8: ( VOID MAIN '(' ')' '{' declarations statements '}' )
-			// Trago.g:96:10: VOID MAIN '(' ')' '{' declarations statements '}'
+			// Trago.g:99:8: ( VOID MAIN '(' ')' '{' declarations statements '}' )
+			// Trago.g:99:10: VOID MAIN '(' ')' '{' declarations statements '}'
 			{
 			match(input,VOID,FOLLOW_VOID_in_program22); 
 			match(input,MAIN,FOLLOW_MAIN_in_program24); 
@@ -204,13 +207,13 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "declarations"
-	// Trago.g:116:1: declarations : ( type Identifier ';' declarations |);
+	// Trago.g:119:1: declarations : ( type Identifier ';' declarations |);
 	public final void declarations() throws RecognitionException {
 		Token Identifier1=null;
 		Type type2 =null;
 
 		try {
-			// Trago.g:116:13: ( type Identifier ';' declarations |)
+			// Trago.g:119:13: ( type Identifier ';' declarations |)
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0==CHAR||LA1_0==FLOAT||LA1_0==INT) ) {
@@ -228,7 +231,7 @@ public class TragoParser extends Parser {
 
 			switch (alt1) {
 				case 1 :
-					// Trago.g:116:15: type Identifier ';' declarations
+					// Trago.g:119:15: type Identifier ';' declarations
 					{
 					pushFollow(FOLLOW_type_in_declarations113);
 					type2=type();
@@ -262,7 +265,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:136:9: 
+					// Trago.g:139:9: 
 					{
 
 								     if (TRACEON)
@@ -286,13 +289,13 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// Trago.g:143:1: type returns [Type attr_type] : ( INT | CHAR | FLOAT );
+	// Trago.g:146:1: type returns [Type attr_type] : ( INT | CHAR | FLOAT );
 	public final Type type() throws RecognitionException {
 		Type attr_type = null;
 
 
 		try {
-			// Trago.g:145:5: ( INT | CHAR | FLOAT )
+			// Trago.g:148:5: ( INT | CHAR | FLOAT )
 			int alt2=3;
 			switch ( input.LA(1) ) {
 			case INT:
@@ -317,21 +320,21 @@ public class TragoParser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// Trago.g:145:7: INT
+					// Trago.g:148:7: INT
 					{
 					match(input,INT,FOLLOW_INT_in_type175); 
 					 if (TRACEON) System.out.println("type: INT"); attr_type=Type.INT; 
 					}
 					break;
 				case 2 :
-					// Trago.g:146:7: CHAR
+					// Trago.g:149:7: CHAR
 					{
 					match(input,CHAR,FOLLOW_CHAR_in_type185); 
 					 if (TRACEON) System.out.println("type: CHAR"); attr_type=Type.CHAR; 
 					}
 					break;
 				case 3 :
-					// Trago.g:147:7: FLOAT
+					// Trago.g:150:7: FLOAT
 					{
 					match(input,FLOAT,FOLLOW_FLOAT_in_type195); 
 					if (TRACEON) System.out.println("type: FLOAT"); attr_type=Type.FLOAT; 
@@ -354,10 +357,10 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "statements"
-	// Trago.g:150:1: statements : ( statement statements |);
+	// Trago.g:153:1: statements : ( statement statements |);
 	public final void statements() throws RecognitionException {
 		try {
-			// Trago.g:150:11: ( statement statements |)
+			// Trago.g:153:11: ( statement statements |)
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==FOR||LA3_0==IF||LA3_0==Identifier||LA3_0==PRINTF||LA3_0==WHILE) ) {
@@ -375,7 +378,7 @@ public class TragoParser extends Parser {
 
 			switch (alt3) {
 				case 1 :
-					// Trago.g:150:12: statement statements
+					// Trago.g:153:12: statement statements
 					{
 					pushFollow(FOLLOW_statement_in_statements205);
 					statement();
@@ -388,7 +391,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:152:11: 
+					// Trago.g:155:11: 
 					{
 					}
 					break;
@@ -408,10 +411,10 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "statement"
-	// Trago.g:154:1: statement : ( assign_stmt ';' | if_stmt | func_no_return_stmt ';' | for_stmt | while_stmt | printf_statements );
+	// Trago.g:157:1: statement : ( assign_stmt ';' | if_stmt | func_no_return_stmt ';' | for_stmt | while_stmt | printf_statements );
 	public final void statement() throws RecognitionException {
 		try {
-			// Trago.g:154:10: ( assign_stmt ';' | if_stmt | func_no_return_stmt ';' | for_stmt | while_stmt | printf_statements )
+			// Trago.g:157:10: ( assign_stmt ';' | if_stmt | func_no_return_stmt ';' | for_stmt | while_stmt | printf_statements )
 			int alt4=6;
 			switch ( input.LA(1) ) {
 			case Identifier:
@@ -465,7 +468,7 @@ public class TragoParser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// Trago.g:154:12: assign_stmt ';'
+					// Trago.g:157:12: assign_stmt ';'
 					{
 					pushFollow(FOLLOW_assign_stmt_in_statement237);
 					assign_stmt();
@@ -475,7 +478,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:155:12: if_stmt
+					// Trago.g:158:12: if_stmt
 					{
 					pushFollow(FOLLOW_if_stmt_in_statement252);
 					if_stmt();
@@ -484,7 +487,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Trago.g:156:12: func_no_return_stmt ';'
+					// Trago.g:159:12: func_no_return_stmt ';'
 					{
 					pushFollow(FOLLOW_func_no_return_stmt_in_statement265);
 					func_no_return_stmt();
@@ -494,7 +497,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 4 :
-					// Trago.g:157:12: for_stmt
+					// Trago.g:160:12: for_stmt
 					{
 					pushFollow(FOLLOW_for_stmt_in_statement280);
 					for_stmt();
@@ -503,7 +506,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 5 :
-					// Trago.g:158:12: while_stmt
+					// Trago.g:161:12: while_stmt
 					{
 					pushFollow(FOLLOW_while_stmt_in_statement293);
 					while_stmt();
@@ -512,7 +515,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 6 :
-					// Trago.g:159:12: printf_statements
+					// Trago.g:162:12: printf_statements
 					{
 					pushFollow(FOLLOW_printf_statements_in_statement306);
 					printf_statements();
@@ -536,7 +539,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "printf_statements"
-	// Trago.g:161:1: printf_statements returns [List <String> c=new ArrayList()] : PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';' ;
+	// Trago.g:165:1: printf_statements returns [List <String> c=new ArrayList()] : PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';' ;
 	public final List <String> printf_statements() throws RecognitionException {
 		List <String> c = new ArrayList();
 
@@ -545,13 +548,13 @@ public class TragoParser extends Parser {
 		Token b=null;
 
 		try {
-			// Trago.g:161:59: ( PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';' )
-			// Trago.g:161:61: PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';'
+			// Trago.g:165:59: ( PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';' )
+			// Trago.g:165:61: PRINTF '(' a= STRING_LITERAL ( ',' b= Identifier )* ')' ';'
 			{
-			match(input,PRINTF,FOLLOW_PRINTF_in_printf_statements325); 
-			match(input,23,FOLLOW_23_in_printf_statements326); 
-			a=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_printf_statements330); 
-			// Trago.g:161:88: ( ',' b= Identifier )*
+			match(input,PRINTF,FOLLOW_PRINTF_in_printf_statements335); 
+			match(input,23,FOLLOW_23_in_printf_statements336); 
+			a=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_printf_statements340); 
+			// Trago.g:165:88: ( ',' b= Identifier )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -562,10 +565,10 @@ public class TragoParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// Trago.g:161:89: ',' b= Identifier
+					// Trago.g:165:89: ',' b= Identifier
 					{
-					match(input,27,FOLLOW_27_in_printf_statements333); 
-					b=(Token)match(input,Identifier,FOLLOW_Identifier_in_printf_statements336); 
+					match(input,27,FOLLOW_27_in_printf_statements343); 
+					b=(Token)match(input,Identifier,FOLLOW_Identifier_in_printf_statements346); 
 					c.add((b!=null?b.getText():null));
 					}
 					break;
@@ -575,8 +578,8 @@ public class TragoParser extends Parser {
 				}
 			}
 
-			match(input,24,FOLLOW_24_in_printf_statements340); 
-			match(input,30,FOLLOW_30_in_printf_statements342); 
+			match(input,24,FOLLOW_24_in_printf_statements350); 
+			match(input,30,FOLLOW_30_in_printf_statements352); 
 
 			            prn("\t; print the value.");
 			            (a!=null?a.getText():null).toString();
@@ -669,7 +672,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "for_stmt"
-	// Trago.g:236:1: for_stmt returns [String lab] : FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt ;
+	// Trago.g:240:1: for_stmt returns [String lab] : FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt ;
 	public final String for_stmt() throws RecognitionException {
 		String lab = null;
 
@@ -677,27 +680,27 @@ public class TragoParser extends Parser {
 		ParserRuleReturnScope a =null;
 
 		try {
-			// Trago.g:236:29: ( FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt )
-			// Trago.g:236:31: FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt
+			// Trago.g:240:29: ( FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt )
+			// Trago.g:240:31: FOR '(' assign_stmt ';' a= cond_expression ';' assign_stmt ')' block_stmt
 			{
-			match(input,FOR,FOLLOW_FOR_in_for_stmt352); 
-			match(input,23,FOLLOW_23_in_for_stmt354); 
-			pushFollow(FOLLOW_assign_stmt_in_for_stmt356);
+			match(input,FOR,FOLLOW_FOR_in_for_stmt362); 
+			match(input,23,FOLLOW_23_in_for_stmt364); 
+			pushFollow(FOLLOW_assign_stmt_in_for_stmt366);
 			assign_stmt();
 			state._fsp--;
 
-			match(input,30,FOLLOW_30_in_for_stmt358); 
-			pushFollow(FOLLOW_cond_expression_in_for_stmt381);
+			match(input,30,FOLLOW_30_in_for_stmt368); 
+			pushFollow(FOLLOW_cond_expression_in_for_stmt391);
 			a=cond_expression();
 			state._fsp--;
 
-			match(input,30,FOLLOW_30_in_for_stmt383); 
-			pushFollow(FOLLOW_assign_stmt_in_for_stmt399);
+			match(input,30,FOLLOW_30_in_for_stmt393); 
+			pushFollow(FOLLOW_assign_stmt_in_for_stmt409);
 			assign_stmt();
 			state._fsp--;
 
-			match(input,24,FOLLOW_24_in_for_stmt412); 
-			pushFollow(FOLLOW_block_stmt_in_for_stmt429);
+			match(input,24,FOLLOW_24_in_for_stmt422); 
+			pushFollow(FOLLOW_block_stmt_in_for_stmt439);
 			block_stmt();
 			state._fsp--;
 
@@ -718,7 +721,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "while_stmt"
-	// Trago.g:242:1: while_stmt returns [String lab] : WHILE '(' a= cond_expression ')' block_stmt ;
+	// Trago.g:246:1: while_stmt returns [String lab] : WHILE '(' a= cond_expression ')' block_stmt ;
 	public final String while_stmt() throws RecognitionException {
 		String lab = null;
 
@@ -726,23 +729,23 @@ public class TragoParser extends Parser {
 		ParserRuleReturnScope a =null;
 
 		try {
-			// Trago.g:242:31: ( WHILE '(' a= cond_expression ')' block_stmt )
-			// Trago.g:242:33: WHILE '(' a= cond_expression ')' block_stmt
+			// Trago.g:246:31: ( WHILE '(' a= cond_expression ')' block_stmt )
+			// Trago.g:246:33: WHILE '(' a= cond_expression ')' block_stmt
 			{
-			match(input,WHILE,FOLLOW_WHILE_in_while_stmt447); 
+			match(input,WHILE,FOLLOW_WHILE_in_while_stmt457); 
 
 			                    String label=newLabel();
 			                    lab =label;
 			                    
 			                    prn(label+": ");
 			                   
-			match(input,23,FOLLOW_23_in_while_stmt452); 
-			pushFollow(FOLLOW_cond_expression_in_while_stmt456);
+			match(input,23,FOLLOW_23_in_while_stmt462); 
+			pushFollow(FOLLOW_cond_expression_in_while_stmt466);
 			a=cond_expression();
 			state._fsp--;
 
-			match(input,24,FOLLOW_24_in_while_stmt458); 
-			pushFollow(FOLLOW_block_stmt_in_while_stmt460);
+			match(input,24,FOLLOW_24_in_while_stmt468); 
+			pushFollow(FOLLOW_block_stmt_in_while_stmt470);
 			block_stmt();
 			state._fsp--;
 
@@ -768,19 +771,19 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "if_stmt"
-	// Trago.g:254:1: if_stmt : if_then_stmt if_else_stmt[$if_then_stmt.lab] ;
+	// Trago.g:258:1: if_stmt : if_then_stmt if_else_stmt[$if_then_stmt.lab] ;
 	public final void if_stmt() throws RecognitionException {
 		String if_then_stmt3 =null;
 
 		try {
-			// Trago.g:255:13: ( if_then_stmt if_else_stmt[$if_then_stmt.lab] )
-			// Trago.g:255:15: if_then_stmt if_else_stmt[$if_then_stmt.lab]
+			// Trago.g:259:13: ( if_then_stmt if_else_stmt[$if_then_stmt.lab] )
+			// Trago.g:259:15: if_then_stmt if_else_stmt[$if_then_stmt.lab]
 			{
-			pushFollow(FOLLOW_if_then_stmt_in_if_stmt496);
+			pushFollow(FOLLOW_if_then_stmt_in_if_stmt506);
 			if_then_stmt3=if_then_stmt();
 			state._fsp--;
 
-			pushFollow(FOLLOW_if_else_stmt_in_if_stmt498);
+			pushFollow(FOLLOW_if_else_stmt_in_if_stmt508);
 			if_else_stmt(if_then_stmt3);
 			state._fsp--;
 
@@ -800,7 +803,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "if_then_stmt"
-	// Trago.g:258:1: if_then_stmt returns [String lab] : IF '(' a= cond_expression ')' block_stmt ;
+	// Trago.g:262:1: if_then_stmt returns [String lab] : IF '(' a= cond_expression ')' block_stmt ;
 	public final String if_then_stmt() throws RecognitionException {
 		String lab = null;
 
@@ -808,17 +811,17 @@ public class TragoParser extends Parser {
 		ParserRuleReturnScope a =null;
 
 		try {
-			// Trago.g:259:20: ( IF '(' a= cond_expression ')' block_stmt )
-			// Trago.g:259:22: IF '(' a= cond_expression ')' block_stmt
+			// Trago.g:263:20: ( IF '(' a= cond_expression ')' block_stmt )
+			// Trago.g:263:22: IF '(' a= cond_expression ')' block_stmt
 			{
-			match(input,IF,FOLLOW_IF_in_if_then_stmt526); 
-			match(input,23,FOLLOW_23_in_if_then_stmt528); 
-			pushFollow(FOLLOW_cond_expression_in_if_then_stmt532);
+			match(input,IF,FOLLOW_IF_in_if_then_stmt536); 
+			match(input,23,FOLLOW_23_in_if_then_stmt538); 
+			pushFollow(FOLLOW_cond_expression_in_if_then_stmt542);
 			a=cond_expression();
 			state._fsp--;
 
-			match(input,24,FOLLOW_24_in_if_then_stmt534); 
-			pushFollow(FOLLOW_block_stmt_in_if_then_stmt536);
+			match(input,24,FOLLOW_24_in_if_then_stmt544); 
+			pushFollow(FOLLOW_block_stmt_in_if_then_stmt546);
 			block_stmt();
 			state._fsp--;
 
@@ -845,10 +848,10 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "if_else_stmt"
-	// Trago.g:268:1: if_else_stmt[String lab] : ( ELSE block_stmt |);
+	// Trago.g:272:1: if_else_stmt[String lab] : ( ELSE block_stmt |);
 	public final void if_else_stmt(String lab) throws RecognitionException {
 		try {
-			// Trago.g:269:13: ( ELSE block_stmt |)
+			// Trago.g:273:13: ( ELSE block_stmt |)
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0==ELSE) ) {
@@ -866,10 +869,10 @@ public class TragoParser extends Parser {
 
 			switch (alt6) {
 				case 1 :
-					// Trago.g:269:15: ELSE block_stmt
+					// Trago.g:273:15: ELSE block_stmt
 					{
-					match(input,ELSE,FOLLOW_ELSE_in_if_else_stmt560); 
-					pushFollow(FOLLOW_block_stmt_in_if_else_stmt562);
+					match(input,ELSE,FOLLOW_ELSE_in_if_else_stmt570); 
+					pushFollow(FOLLOW_block_stmt_in_if_else_stmt572);
 					block_stmt();
 					state._fsp--;
 
@@ -879,7 +882,7 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:272:15: 
+					// Trago.g:276:15: 
 					{
 					prn(lab+":");
 					}
@@ -900,18 +903,18 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "block_stmt"
-	// Trago.g:276:1: block_stmt : '{' statements '}' ;
+	// Trago.g:280:1: block_stmt : '{' statements '}' ;
 	public final void block_stmt() throws RecognitionException {
 		try {
-			// Trago.g:276:11: ( '{' statements '}' )
-			// Trago.g:276:13: '{' statements '}'
+			// Trago.g:280:11: ( '{' statements '}' )
+			// Trago.g:280:13: '{' statements '}'
 			{
-			match(input,32,FOLLOW_32_in_block_stmt606); 
-			pushFollow(FOLLOW_statements_in_block_stmt608);
+			match(input,32,FOLLOW_32_in_block_stmt616); 
+			pushFollow(FOLLOW_statements_in_block_stmt618);
 			statements();
 			state._fsp--;
 
-			match(input,33,FOLLOW_33_in_block_stmt610); 
+			match(input,33,FOLLOW_33_in_block_stmt620); 
 			}
 
 		}
@@ -928,19 +931,19 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "assign_stmt"
-	// Trago.g:280:1: assign_stmt : Identifier '=' (a= type )? arith_expression ;
+	// Trago.g:284:1: assign_stmt : Identifier '=' (a= type )? arith_expression ;
 	public final void assign_stmt() throws RecognitionException {
 		Token Identifier4=null;
 		Type a =null;
 		ParserRuleReturnScope arith_expression5 =null;
 
 		try {
-			// Trago.g:280:12: ( Identifier '=' (a= type )? arith_expression )
-			// Trago.g:280:14: Identifier '=' (a= type )? arith_expression
+			// Trago.g:284:12: ( Identifier '=' (a= type )? arith_expression )
+			// Trago.g:284:14: Identifier '=' (a= type )? arith_expression
 			{
-			Identifier4=(Token)match(input,Identifier,FOLLOW_Identifier_in_assign_stmt622); 
-			match(input,31,FOLLOW_31_in_assign_stmt624); 
-			// Trago.g:280:29: (a= type )?
+			Identifier4=(Token)match(input,Identifier,FOLLOW_Identifier_in_assign_stmt632); 
+			match(input,31,FOLLOW_31_in_assign_stmt634); 
+			// Trago.g:284:29: (a= type )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0==CHAR||LA7_0==FLOAT||LA7_0==INT) ) {
@@ -948,9 +951,9 @@ public class TragoParser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// Trago.g:280:30: a= type
+					// Trago.g:284:30: a= type
 					{
-					pushFollow(FOLLOW_type_in_assign_stmt629);
+					pushFollow(FOLLOW_type_in_assign_stmt639);
 					a=type();
 					state._fsp--;
 
@@ -959,7 +962,7 @@ public class TragoParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_arith_expression_in_assign_stmt633);
+			pushFollow(FOLLOW_arith_expression_in_assign_stmt643);
 			arith_expression5=arith_expression();
 			state._fsp--;
 
@@ -980,7 +983,7 @@ public class TragoParser extends Parser {
 						              prn("\tistore " + the_mem);
 						              break;
 						   case FLOAT:
-			                    prn("\tfstore " + the_mem);
+			                          prn("\tfstore " + the_mem);
 						              break;
 						   case CHAR:
 						              break;
@@ -1002,19 +1005,19 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "func_no_return_stmt"
-	// Trago.g:305:1: func_no_return_stmt : Identifier '(' argument ')' ;
+	// Trago.g:309:1: func_no_return_stmt : Identifier '(' argument ')' ;
 	public final void func_no_return_stmt() throws RecognitionException {
 		try {
-			// Trago.g:305:20: ( Identifier '(' argument ')' )
-			// Trago.g:305:22: Identifier '(' argument ')'
+			// Trago.g:309:20: ( Identifier '(' argument ')' )
+			// Trago.g:309:22: Identifier '(' argument ')'
 			{
-			match(input,Identifier,FOLLOW_Identifier_in_func_no_return_stmt658); 
-			match(input,23,FOLLOW_23_in_func_no_return_stmt660); 
-			pushFollow(FOLLOW_argument_in_func_no_return_stmt662);
+			match(input,Identifier,FOLLOW_Identifier_in_func_no_return_stmt664); 
+			match(input,23,FOLLOW_23_in_func_no_return_stmt666); 
+			pushFollow(FOLLOW_argument_in_func_no_return_stmt668);
 			argument();
 			state._fsp--;
 
-			match(input,24,FOLLOW_24_in_func_no_return_stmt664); 
+			match(input,24,FOLLOW_24_in_func_no_return_stmt670); 
 			}
 
 		}
@@ -1031,17 +1034,17 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "argument"
-	// Trago.g:307:1: argument : arg ( ',' arg )* ;
+	// Trago.g:311:1: argument : arg ( ',' arg )* ;
 	public final void argument() throws RecognitionException {
 		try {
-			// Trago.g:307:9: ( arg ( ',' arg )* )
-			// Trago.g:307:11: arg ( ',' arg )*
+			// Trago.g:311:9: ( arg ( ',' arg )* )
+			// Trago.g:311:11: arg ( ',' arg )*
 			{
-			pushFollow(FOLLOW_arg_in_argument690);
+			pushFollow(FOLLOW_arg_in_argument696);
 			arg();
 			state._fsp--;
 
-			// Trago.g:307:15: ( ',' arg )*
+			// Trago.g:311:15: ( ',' arg )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -1052,10 +1055,10 @@ public class TragoParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// Trago.g:307:16: ',' arg
+					// Trago.g:311:16: ',' arg
 					{
-					match(input,27,FOLLOW_27_in_argument693); 
-					pushFollow(FOLLOW_arg_in_argument695);
+					match(input,27,FOLLOW_27_in_argument699); 
+					pushFollow(FOLLOW_arg_in_argument701);
 					arg();
 					state._fsp--;
 
@@ -1083,10 +1086,10 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "arg"
-	// Trago.g:309:1: arg : ( arith_expression | STRING_LITERAL );
+	// Trago.g:313:1: arg : ( arith_expression | STRING_LITERAL );
 	public final void arg() throws RecognitionException {
 		try {
-			// Trago.g:309:4: ( arith_expression | STRING_LITERAL )
+			// Trago.g:313:4: ( arith_expression | STRING_LITERAL )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==Floating_point_constant||(LA9_0 >= Identifier && LA9_0 <= Integer_constant)||(LA9_0 >= 22 && LA9_0 <= 23)||LA9_0==28) ) {
@@ -1104,18 +1107,18 @@ public class TragoParser extends Parser {
 
 			switch (alt9) {
 				case 1 :
-					// Trago.g:309:6: arith_expression
+					// Trago.g:313:6: arith_expression
 					{
-					pushFollow(FOLLOW_arith_expression_in_arg712);
+					pushFollow(FOLLOW_arith_expression_in_arg718);
 					arith_expression();
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// Trago.g:310:6: STRING_LITERAL
+					// Trago.g:314:6: STRING_LITERAL
 					{
-					match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_arg719); 
+					match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_arg725); 
 					}
 					break;
 
@@ -1140,7 +1143,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "cond_expression"
-	// Trago.g:313:1: cond_expression returns [boolean truth,Type type,String lab] : a= arith_expression (b= RelationOP c= arith_expression )* ;
+	// Trago.g:317:1: cond_expression returns [boolean truth,Type type,String lab] : a= arith_expression (b= RelationOP c= arith_expression )* ;
 	public final TragoParser.cond_expression_return cond_expression() throws RecognitionException {
 		TragoParser.cond_expression_return retval = new TragoParser.cond_expression_return();
 		retval.start = input.LT(1);
@@ -1150,10 +1153,10 @@ public class TragoParser extends Parser {
 		ParserRuleReturnScope c =null;
 
 		try {
-			// Trago.g:315:16: (a= arith_expression (b= RelationOP c= arith_expression )* )
-			// Trago.g:315:18: a= arith_expression (b= RelationOP c= arith_expression )*
+			// Trago.g:319:16: (a= arith_expression (b= RelationOP c= arith_expression )* )
+			// Trago.g:319:18: a= arith_expression (b= RelationOP c= arith_expression )*
 			{
-			pushFollow(FOLLOW_arith_expression_in_cond_expression757);
+			pushFollow(FOLLOW_arith_expression_in_cond_expression763);
 			a=arith_expression();
 			state._fsp--;
 
@@ -1163,7 +1166,7 @@ public class TragoParser extends Parser {
 								  else
 								      truth = false;*/
 							    
-			// Trago.g:321:9: (b= RelationOP c= arith_expression )*
+			// Trago.g:325:9: (b= RelationOP c= arith_expression )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -1174,10 +1177,10 @@ public class TragoParser extends Parser {
 
 				switch (alt10) {
 				case 1 :
-					// Trago.g:321:10: b= RelationOP c= arith_expression
+					// Trago.g:325:10: b= RelationOP c= arith_expression
 					{
-					b=(Token)match(input,RelationOP,FOLLOW_RelationOP_in_cond_expression771); 
-					pushFollow(FOLLOW_arith_expression_in_cond_expression775);
+					b=(Token)match(input,RelationOP,FOLLOW_RelationOP_in_cond_expression777); 
+					pushFollow(FOLLOW_arith_expression_in_cond_expression781);
 					c=arith_expression();
 					state._fsp--;
 
@@ -1290,7 +1293,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "arith_expression"
-	// Trago.g:400:1: arith_expression returns [Type attr_type] : a= multExpr ( '+' b= multExpr | '-' c= multExpr )* ;
+	// Trago.g:404:1: arith_expression returns [Type attr_type] : a= multExpr ( '+' b= multExpr | '-' c= multExpr )* ;
 	public final TragoParser.arith_expression_return arith_expression() throws RecognitionException {
 		TragoParser.arith_expression_return retval = new TragoParser.arith_expression_return();
 		retval.start = input.LT(1);
@@ -1300,15 +1303,15 @@ public class TragoParser extends Parser {
 		Type c =null;
 
 		try {
-			// Trago.g:402:17: (a= multExpr ( '+' b= multExpr | '-' c= multExpr )* )
-			// Trago.g:402:19: a= multExpr ( '+' b= multExpr | '-' c= multExpr )*
+			// Trago.g:406:17: (a= multExpr ( '+' b= multExpr | '-' c= multExpr )* )
+			// Trago.g:406:19: a= multExpr ( '+' b= multExpr | '-' c= multExpr )*
 			{
-			pushFollow(FOLLOW_multExpr_in_arith_expression814);
+			pushFollow(FOLLOW_multExpr_in_arith_expression820);
 			a=multExpr();
 			state._fsp--;
 
 			 retval.attr_type = a; 
-			// Trago.g:403:19: ( '+' b= multExpr | '-' c= multExpr )*
+			// Trago.g:407:19: ( '+' b= multExpr | '-' c= multExpr )*
 			loop11:
 			while (true) {
 				int alt11=3;
@@ -1322,10 +1325,10 @@ public class TragoParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// Trago.g:403:21: '+' b= multExpr
+					// Trago.g:407:21: '+' b= multExpr
 					{
-					match(input,26,FOLLOW_26_in_arith_expression838); 
-					pushFollow(FOLLOW_multExpr_in_arith_expression842);
+					match(input,26,FOLLOW_26_in_arith_expression844); 
+					pushFollow(FOLLOW_multExpr_in_arith_expression848);
 					b=multExpr();
 					state._fsp--;
 
@@ -1340,10 +1343,10 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:411:21: '-' c= multExpr
+					// Trago.g:415:21: '-' c= multExpr
 					{
-					match(input,28,FOLLOW_28_in_arith_expression866); 
-					pushFollow(FOLLOW_multExpr_in_arith_expression870);
+					match(input,28,FOLLOW_28_in_arith_expression872); 
+					pushFollow(FOLLOW_multExpr_in_arith_expression876);
 					c=multExpr();
 					state._fsp--;
 
@@ -1382,7 +1385,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "multExpr"
-	// Trago.g:421:1: multExpr returns [Type attr_type] : a= signExpr ( '*' b= signExpr | '/' c= signExpr )* ;
+	// Trago.g:425:1: multExpr returns [Type attr_type] : a= signExpr ( '*' b= signExpr | '/' c= signExpr )* ;
 	public final Type multExpr() throws RecognitionException {
 		Type attr_type = null;
 
@@ -1392,15 +1395,15 @@ public class TragoParser extends Parser {
 		Type c =null;
 
 		try {
-			// Trago.g:423:11: (a= signExpr ( '*' b= signExpr | '/' c= signExpr )* )
-			// Trago.g:423:13: a= signExpr ( '*' b= signExpr | '/' c= signExpr )*
+			// Trago.g:427:11: (a= signExpr ( '*' b= signExpr | '/' c= signExpr )* )
+			// Trago.g:427:13: a= signExpr ( '*' b= signExpr | '/' c= signExpr )*
 			{
-			pushFollow(FOLLOW_signExpr_in_multExpr933);
+			pushFollow(FOLLOW_signExpr_in_multExpr939);
 			a=signExpr();
 			state._fsp--;
 
 			 attr_type =a; 
-			// Trago.g:424:11: ( '*' b= signExpr | '/' c= signExpr )*
+			// Trago.g:428:11: ( '*' b= signExpr | '/' c= signExpr )*
 			loop12:
 			while (true) {
 				int alt12=3;
@@ -1414,10 +1417,10 @@ public class TragoParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// Trago.g:424:13: '*' b= signExpr
+					// Trago.g:428:13: '*' b= signExpr
 					{
-					match(input,25,FOLLOW_25_in_multExpr949); 
-					pushFollow(FOLLOW_signExpr_in_multExpr953);
+					match(input,25,FOLLOW_25_in_multExpr955); 
+					pushFollow(FOLLOW_signExpr_in_multExpr959);
 					b=signExpr();
 					state._fsp--;
 
@@ -1432,10 +1435,10 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:433:13: '/' c= signExpr
+					// Trago.g:437:13: '/' c= signExpr
 					{
-					match(input,29,FOLLOW_29_in_multExpr975); 
-					pushFollow(FOLLOW_signExpr_in_multExpr979);
+					match(input,29,FOLLOW_29_in_multExpr981); 
+					pushFollow(FOLLOW_signExpr_in_multExpr985);
 					c=signExpr();
 					state._fsp--;
 
@@ -1472,7 +1475,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "signExpr"
-	// Trago.g:444:1: signExpr returns [Type attr_type] : (a= primaryExpr | '-' b= primaryExpr );
+	// Trago.g:448:1: signExpr returns [Type attr_type] : (a= primaryExpr | '-' b= primaryExpr );
 	public final Type signExpr() throws RecognitionException {
 		Type attr_type = null;
 
@@ -1481,7 +1484,7 @@ public class TragoParser extends Parser {
 		Type b =null;
 
 		try {
-			// Trago.g:446:9: (a= primaryExpr | '-' b= primaryExpr )
+			// Trago.g:450:9: (a= primaryExpr | '-' b= primaryExpr )
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0==Floating_point_constant||(LA13_0 >= Identifier && LA13_0 <= Integer_constant)||(LA13_0 >= 22 && LA13_0 <= 23)) ) {
@@ -1499,9 +1502,9 @@ public class TragoParser extends Parser {
 
 			switch (alt13) {
 				case 1 :
-					// Trago.g:446:11: a= primaryExpr
+					// Trago.g:450:11: a= primaryExpr
 					{
-					pushFollow(FOLLOW_primaryExpr_in_signExpr1019);
+					pushFollow(FOLLOW_primaryExpr_in_signExpr1025);
 					a=primaryExpr();
 					state._fsp--;
 
@@ -1509,10 +1512,10 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:447:11: '-' b= primaryExpr
+					// Trago.g:451:11: '-' b= primaryExpr
 					{
-					match(input,28,FOLLOW_28_in_signExpr1034); 
-					pushFollow(FOLLOW_primaryExpr_in_signExpr1038);
+					match(input,28,FOLLOW_28_in_signExpr1040); 
+					pushFollow(FOLLOW_primaryExpr_in_signExpr1044);
 					b=primaryExpr();
 					state._fsp--;
 
@@ -1542,7 +1545,7 @@ public class TragoParser extends Parser {
 
 
 	// $ANTLR start "primaryExpr"
-	// Trago.g:454:1: primaryExpr returns [Type attr_type] : ( Integer_constant | Floating_point_constant | Identifier | '&' Identifier | '(' a= arith_expression ')' );
+	// Trago.g:458:1: primaryExpr returns [Type attr_type] : ( Integer_constant | Floating_point_constant | Identifier | '&' Identifier | '(' a= arith_expression ')' );
 	public final Type primaryExpr() throws RecognitionException {
 		Type attr_type = null;
 
@@ -1554,7 +1557,7 @@ public class TragoParser extends Parser {
 		ParserRuleReturnScope a =null;
 
 		try {
-			// Trago.g:456:12: ( Integer_constant | Floating_point_constant | Identifier | '&' Identifier | '(' a= arith_expression ')' )
+			// Trago.g:460:12: ( Integer_constant | Floating_point_constant | Identifier | '&' Identifier | '(' a= arith_expression ')' )
 			int alt14=5;
 			switch ( input.LA(1) ) {
 			case Integer_constant:
@@ -1589,9 +1592,9 @@ public class TragoParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// Trago.g:456:14: Integer_constant
+					// Trago.g:460:14: Integer_constant
 					{
-					Integer_constant6=(Token)match(input,Integer_constant,FOLLOW_Integer_constant_in_primaryExpr1062); 
+					Integer_constant6=(Token)match(input,Integer_constant,FOLLOW_Integer_constant_in_primaryExpr1068); 
 
 								    attr_type = Type.INT;
 									
@@ -1602,9 +1605,9 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Trago.g:464:14: Floating_point_constant
+					// Trago.g:468:14: Floating_point_constant
 					{
-					Floating_point_constant7=(Token)match(input,Floating_point_constant,FOLLOW_Floating_point_constant_in_primaryExpr1086); 
+					Floating_point_constant7=(Token)match(input,Floating_point_constant,FOLLOW_Floating_point_constant_in_primaryExpr1092); 
 
 					                 attr_type = Type.FLOAT;
 					                 prn("\tldc " + (Floating_point_constant7!=null?Floating_point_constant7.getText():null));
@@ -1612,9 +1615,9 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Trago.g:468:14: Identifier
+					// Trago.g:472:14: Identifier
 					{
-					Identifier8=(Token)match(input,Identifier,FOLLOW_Identifier_in_primaryExpr1102); 
+					Identifier8=(Token)match(input,Identifier,FOLLOW_Identifier_in_primaryExpr1108); 
 
 								    // get type information from symtab.
 								    attr_type = (Type) symtab.get((Identifier8!=null?Identifier8.getText():null)).get(0);
@@ -1635,10 +1638,10 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 4 :
-					// Trago.g:486:9: '&' Identifier
+					// Trago.g:490:9: '&' Identifier
 					{
-					match(input,22,FOLLOW_22_in_primaryExpr1119); 
-					Identifier9=(Token)match(input,Identifier,FOLLOW_Identifier_in_primaryExpr1121); 
+					match(input,22,FOLLOW_22_in_primaryExpr1125); 
+					Identifier9=(Token)match(input,Identifier,FOLLOW_Identifier_in_primaryExpr1127); 
 
 					          // get type information from symtab.
 					          attr_type = (Type) symtab.get((Identifier9!=null?Identifier9.getText():null)).get(0);
@@ -1659,14 +1662,14 @@ public class TragoParser extends Parser {
 					}
 					break;
 				case 5 :
-					// Trago.g:503:7: '(' a= arith_expression ')'
+					// Trago.g:507:7: '(' a= arith_expression ')'
 					{
-					match(input,23,FOLLOW_23_in_primaryExpr1130); 
-					pushFollow(FOLLOW_arith_expression_in_primaryExpr1134);
+					match(input,23,FOLLOW_23_in_primaryExpr1136); 
+					pushFollow(FOLLOW_arith_expression_in_primaryExpr1140);
 					a=arith_expression();
 					state._fsp--;
 
-					match(input,24,FOLLOW_24_in_primaryExpr1136); 
+					match(input,24,FOLLOW_24_in_primaryExpr1142); 
 
 					        attr_type =(a!=null?((TragoParser.arith_expression_return)a).attr_type:null);
 					     
@@ -1715,74 +1718,74 @@ public class TragoParser extends Parser {
 	public static final BitSet FOLLOW_for_stmt_in_statement280 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_while_stmt_in_statement293 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_printf_statements_in_statement306 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PRINTF_in_printf_statements325 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_printf_statements326 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_STRING_LITERAL_in_printf_statements330 = new BitSet(new long[]{0x0000000009000000L});
-	public static final BitSet FOLLOW_27_in_printf_statements333 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_Identifier_in_printf_statements336 = new BitSet(new long[]{0x0000000009000000L});
-	public static final BitSet FOLLOW_24_in_printf_statements340 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_printf_statements342 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOR_in_for_stmt352 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_for_stmt354 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_assign_stmt_in_for_stmt356 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_for_stmt358 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_cond_expression_in_for_stmt381 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_for_stmt383 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_assign_stmt_in_for_stmt399 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_24_in_for_stmt412 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_block_stmt_in_for_stmt429 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WHILE_in_while_stmt447 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_while_stmt452 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_cond_expression_in_while_stmt456 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_24_in_while_stmt458 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_block_stmt_in_while_stmt460 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_if_then_stmt_in_if_stmt496 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_if_else_stmt_in_if_stmt498 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_if_then_stmt526 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_if_then_stmt528 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_cond_expression_in_if_then_stmt532 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_24_in_if_then_stmt534 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_block_stmt_in_if_then_stmt536 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ELSE_in_if_else_stmt560 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_block_stmt_in_if_else_stmt562 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_32_in_block_stmt606 = new BitSet(new long[]{0x0000000200112A00L});
-	public static final BitSet FOLLOW_statements_in_block_stmt608 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_block_stmt610 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_assign_stmt622 = new BitSet(new long[]{0x0000000080000000L});
-	public static final BitSet FOLLOW_31_in_assign_stmt624 = new BitSet(new long[]{0x0000000010C07510L});
-	public static final BitSet FOLLOW_type_in_assign_stmt629 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_arith_expression_in_assign_stmt633 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_func_no_return_stmt658 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_func_no_return_stmt660 = new BitSet(new long[]{0x0000000010C46400L});
-	public static final BitSet FOLLOW_argument_in_func_no_return_stmt662 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_24_in_func_no_return_stmt664 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_arg_in_argument690 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_27_in_argument693 = new BitSet(new long[]{0x0000000010C46400L});
-	public static final BitSet FOLLOW_arg_in_argument695 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_arith_expression_in_arg712 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_STRING_LITERAL_in_arg719 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_arith_expression_in_cond_expression757 = new BitSet(new long[]{0x0000000000020002L});
-	public static final BitSet FOLLOW_RelationOP_in_cond_expression771 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_arith_expression_in_cond_expression775 = new BitSet(new long[]{0x0000000000020002L});
-	public static final BitSet FOLLOW_multExpr_in_arith_expression814 = new BitSet(new long[]{0x0000000014000002L});
-	public static final BitSet FOLLOW_26_in_arith_expression838 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_multExpr_in_arith_expression842 = new BitSet(new long[]{0x0000000014000002L});
-	public static final BitSet FOLLOW_28_in_arith_expression866 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_multExpr_in_arith_expression870 = new BitSet(new long[]{0x0000000014000002L});
-	public static final BitSet FOLLOW_signExpr_in_multExpr933 = new BitSet(new long[]{0x0000000022000002L});
-	public static final BitSet FOLLOW_25_in_multExpr949 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_signExpr_in_multExpr953 = new BitSet(new long[]{0x0000000022000002L});
-	public static final BitSet FOLLOW_29_in_multExpr975 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_signExpr_in_multExpr979 = new BitSet(new long[]{0x0000000022000002L});
-	public static final BitSet FOLLOW_primaryExpr_in_signExpr1019 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_28_in_signExpr1034 = new BitSet(new long[]{0x0000000000C06400L});
-	public static final BitSet FOLLOW_primaryExpr_in_signExpr1038 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Integer_constant_in_primaryExpr1062 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Floating_point_constant_in_primaryExpr1086 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_primaryExpr1102 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_22_in_primaryExpr1119 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_Identifier_in_primaryExpr1121 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_23_in_primaryExpr1130 = new BitSet(new long[]{0x0000000010C06400L});
-	public static final BitSet FOLLOW_arith_expression_in_primaryExpr1134 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_24_in_primaryExpr1136 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PRINTF_in_printf_statements335 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_printf_statements336 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_STRING_LITERAL_in_printf_statements340 = new BitSet(new long[]{0x0000000009000000L});
+	public static final BitSet FOLLOW_27_in_printf_statements343 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_Identifier_in_printf_statements346 = new BitSet(new long[]{0x0000000009000000L});
+	public static final BitSet FOLLOW_24_in_printf_statements350 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_printf_statements352 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FOR_in_for_stmt362 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_for_stmt364 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_assign_stmt_in_for_stmt366 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_for_stmt368 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_cond_expression_in_for_stmt391 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_for_stmt393 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_assign_stmt_in_for_stmt409 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_for_stmt422 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_block_stmt_in_for_stmt439 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_WHILE_in_while_stmt457 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_while_stmt462 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_cond_expression_in_while_stmt466 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_while_stmt468 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_block_stmt_in_while_stmt470 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_if_then_stmt_in_if_stmt506 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_if_else_stmt_in_if_stmt508 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_if_then_stmt536 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_if_then_stmt538 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_cond_expression_in_if_then_stmt542 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_if_then_stmt544 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_block_stmt_in_if_then_stmt546 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ELSE_in_if_else_stmt570 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_block_stmt_in_if_else_stmt572 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_32_in_block_stmt616 = new BitSet(new long[]{0x0000000200112A00L});
+	public static final BitSet FOLLOW_statements_in_block_stmt618 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_33_in_block_stmt620 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_assign_stmt632 = new BitSet(new long[]{0x0000000080000000L});
+	public static final BitSet FOLLOW_31_in_assign_stmt634 = new BitSet(new long[]{0x0000000010C07510L});
+	public static final BitSet FOLLOW_type_in_assign_stmt639 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_arith_expression_in_assign_stmt643 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_func_no_return_stmt664 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_func_no_return_stmt666 = new BitSet(new long[]{0x0000000010C46400L});
+	public static final BitSet FOLLOW_argument_in_func_no_return_stmt668 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_func_no_return_stmt670 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_arg_in_argument696 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_27_in_argument699 = new BitSet(new long[]{0x0000000010C46400L});
+	public static final BitSet FOLLOW_arg_in_argument701 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_arith_expression_in_arg718 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_LITERAL_in_arg725 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_arith_expression_in_cond_expression763 = new BitSet(new long[]{0x0000000000020002L});
+	public static final BitSet FOLLOW_RelationOP_in_cond_expression777 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_arith_expression_in_cond_expression781 = new BitSet(new long[]{0x0000000000020002L});
+	public static final BitSet FOLLOW_multExpr_in_arith_expression820 = new BitSet(new long[]{0x0000000014000002L});
+	public static final BitSet FOLLOW_26_in_arith_expression844 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_multExpr_in_arith_expression848 = new BitSet(new long[]{0x0000000014000002L});
+	public static final BitSet FOLLOW_28_in_arith_expression872 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_multExpr_in_arith_expression876 = new BitSet(new long[]{0x0000000014000002L});
+	public static final BitSet FOLLOW_signExpr_in_multExpr939 = new BitSet(new long[]{0x0000000022000002L});
+	public static final BitSet FOLLOW_25_in_multExpr955 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_signExpr_in_multExpr959 = new BitSet(new long[]{0x0000000022000002L});
+	public static final BitSet FOLLOW_29_in_multExpr981 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_signExpr_in_multExpr985 = new BitSet(new long[]{0x0000000022000002L});
+	public static final BitSet FOLLOW_primaryExpr_in_signExpr1025 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_28_in_signExpr1040 = new BitSet(new long[]{0x0000000000C06400L});
+	public static final BitSet FOLLOW_primaryExpr_in_signExpr1044 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Integer_constant_in_primaryExpr1068 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Floating_point_constant_in_primaryExpr1092 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_primaryExpr1108 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_22_in_primaryExpr1125 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_Identifier_in_primaryExpr1127 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_23_in_primaryExpr1136 = new BitSet(new long[]{0x0000000010C06400L});
+	public static final BitSet FOLLOW_arith_expression_in_primaryExpr1140 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_primaryExpr1142 = new BitSet(new long[]{0x0000000000000002L});
 }

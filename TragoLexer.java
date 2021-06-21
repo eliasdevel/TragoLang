@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Trago.g 2021-06-15 13:50:51
+// $ANTLR 3.5.2 Trago.g 2021-06-21 16:33:58
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -299,8 +299,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:509:6: ( 'caipira' )
-			// Trago.g:509:7: 'caipira'
+			// Trago.g:513:6: ( 'caipira' )
+			// Trago.g:513:7: 'caipira'
 			{
 			match("caipira"); 
 
@@ -320,8 +320,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:510:4: ( 'ceva' )
-			// Trago.g:510:5: 'ceva'
+			// Trago.g:514:4: ( 'ceva' )
+			// Trago.g:514:5: 'ceva'
 			{
 			match("ceva"); 
 
@@ -341,8 +341,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:511:5: ( 'martelihno' )
-			// Trago.g:511:7: 'martelihno'
+			// Trago.g:515:5: ( 'martelihno' )
+			// Trago.g:515:7: 'martelihno'
 			{
 			match("martelihno"); 
 
@@ -362,8 +362,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = MAIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:512:5: ( 'boteco' )
-			// Trago.g:512:7: 'boteco'
+			// Trago.g:516:5: ( 'boteco' )
+			// Trago.g:516:7: 'boteco'
 			{
 			match("boteco"); 
 
@@ -383,8 +383,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = VOID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:513:5: ( 'agua' )
-			// Trago.g:513:7: 'agua'
+			// Trago.g:517:5: ( 'agua' )
+			// Trago.g:517:7: 'agua'
 			{
 			match("agua"); 
 
@@ -404,8 +404,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:514:3: ( 'beber?' )
-			// Trago.g:514:5: 'beber?'
+			// Trago.g:518:3: ( 'beber?' )
+			// Trago.g:518:5: 'beber?'
 			{
 			match("beber?"); 
 
@@ -425,8 +425,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:515:5: ( 'nao' )
-			// Trago.g:515:7: 'nao'
+			// Trago.g:519:5: ( 'nao' )
+			// Trago.g:519:7: 'nao'
 			{
 			match("nao"); 
 
@@ -446,8 +446,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:516:4: ( 'for' )
-			// Trago.g:516:6: 'for'
+			// Trago.g:520:4: ( 'for' )
+			// Trago.g:520:6: 'for'
 			{
 			match("for"); 
 
@@ -467,8 +467,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = WHILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:517:6: ( 'bebendo' )
-			// Trago.g:517:8: 'bebendo'
+			// Trago.g:521:6: ( 'bebendo' )
+			// Trago.g:521:8: 'bebendo'
 			{
 			match("bebendo"); 
 
@@ -488,8 +488,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = PRINTF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:518:7: ( 'mijo' )
-			// Trago.g:518:8: 'mijo'
+			// Trago.g:522:7: ( 'mijo' )
+			// Trago.g:522:8: 'mijo'
 			{
 			match("mijo"); 
 
@@ -509,7 +509,7 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = RelationOP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:519:11: ( '>' | '>=' | '<' | '<=' | '==' | '!=' )
+			// Trago.g:523:11: ( '>' | '>=' | '<' | '<=' | '==' | '!=' )
 			int alt1=6;
 			switch ( input.LA(1) ) {
 			case '>':
@@ -555,40 +555,40 @@ public class TragoLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// Trago.g:519:13: '>'
+					// Trago.g:523:13: '>'
 					{
 					match('>'); 
 					}
 					break;
 				case 2 :
-					// Trago.g:519:18: '>='
+					// Trago.g:523:18: '>='
 					{
 					match(">="); 
 
 					}
 					break;
 				case 3 :
-					// Trago.g:519:25: '<'
+					// Trago.g:523:25: '<'
 					{
 					match('<'); 
 					}
 					break;
 				case 4 :
-					// Trago.g:519:31: '<='
+					// Trago.g:523:31: '<='
 					{
 					match("<="); 
 
 					}
 					break;
 				case 5 :
-					// Trago.g:519:38: '=='
+					// Trago.g:523:38: '=='
 					{
 					match("=="); 
 
 					}
 					break;
 				case 6 :
-					// Trago.g:519:45: '!='
+					// Trago.g:523:45: '!='
 					{
 					match("!="); 
 
@@ -610,8 +610,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = Identifier;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:520:11: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// Trago.g:520:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// Trago.g:524:11: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// Trago.g:524:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -621,7 +621,7 @@ public class TragoLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// Trago.g:520:36: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// Trago.g:524:36: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -666,10 +666,10 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = Integer_constant;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:521:17: ( ( '0' .. '9' )+ )
-			// Trago.g:521:18: ( '0' .. '9' )+
+			// Trago.g:525:17: ( ( '0' .. '9' )+ )
+			// Trago.g:525:18: ( '0' .. '9' )+
 			{
-			// Trago.g:521:18: ( '0' .. '9' )+
+			// Trago.g:525:18: ( '0' .. '9' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -718,10 +718,10 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = Floating_point_constant;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:522:24: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-			// Trago.g:522:25: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+			// Trago.g:526:24: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+			// Trago.g:526:25: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
 			{
-			// Trago.g:522:25: ( '0' .. '9' )+
+			// Trago.g:526:25: ( '0' .. '9' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -755,7 +755,7 @@ public class TragoLexer extends Lexer {
 			}
 
 			match('.'); 
-			// Trago.g:522:39: ( '0' .. '9' )+
+			// Trago.g:526:39: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -804,11 +804,11 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = STRING_LITERAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:524:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
-			// Trago.g:524:8: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
+			// Trago.g:528:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
+			// Trago.g:528:8: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// Trago.g:524:12: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
+			// Trago.g:528:12: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
 			loop6:
 			while (true) {
 				int alt6=3;
@@ -822,14 +822,14 @@ public class TragoLexer extends Lexer {
 
 				switch (alt6) {
 				case 1 :
-					// Trago.g:524:14: EscapeSequence
+					// Trago.g:528:14: EscapeSequence
 					{
 					mEscapeSequence(); 
 
 					}
 					break;
 				case 2 :
-					// Trago.g:524:31: ~ ( '\\\\' | '\"' )
+					// Trago.g:528:31: ~ ( '\\\\' | '\"' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -864,8 +864,8 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:526:3: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// Trago.g:526:4: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// Trago.g:530:3: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// Trago.g:530:4: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -892,12 +892,12 @@ public class TragoLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Trago.g:527:8: ( '/*' ( . )* '*/' )
-			// Trago.g:527:9: '/*' ( . )* '*/'
+			// Trago.g:531:8: ( '/*' ( . )* '*/' )
+			// Trago.g:531:9: '/*' ( . )* '*/'
 			{
 			match("/*"); 
 
-			// Trago.g:527:14: ( . )*
+			// Trago.g:531:14: ( . )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -918,7 +918,7 @@ public class TragoLexer extends Lexer {
 
 				switch (alt7) {
 				case 1 :
-					// Trago.g:527:14: .
+					// Trago.g:531:14: .
 					{
 					matchAny(); 
 					}
@@ -947,8 +947,8 @@ public class TragoLexer extends Lexer {
 	// $ANTLR start "EscapeSequence"
 	public final void mEscapeSequence() throws RecognitionException {
 		try {
-			// Trago.g:532:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-			// Trago.g:532:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+			// Trago.g:536:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+			// Trago.g:536:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 			{
 			match('\\'); 
 			if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {

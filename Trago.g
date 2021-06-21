@@ -5,9 +5,12 @@ grammar Trago;
     // import packages here.
     import java.util.HashMap;
     import java.util.ArrayList;
+    import java.io.*;
 }
 
 @members {
+
+ 
     public static void prn(String str){
         System.out.println(str);
     }
@@ -157,6 +160,7 @@ statement: assign_stmt ';'
          | for_stmt
          | while_stmt
          | printf_statements
+         
          ;
 printf_statements returns[List <String> c=new ArrayList()]: PRINTF'(' a=STRING_LITERAL (','b=Identifier{$c.add($b.text);})*')' ';'{
             prn("\t; print the value.");
@@ -294,14 +298,14 @@ assign_stmt: Identifier '=' (a=type)? arith_expression{
 			              prn("\tistore " + the_mem);
 			              break;
 			   case FLOAT:
-                    prn("\tfstore " + the_mem);
+                          prn("\tfstore " + the_mem);
 			              break;
 			   case CHAR:
 			              break;
 			   }
-             }
+             } 
            ;
-		   
+
 func_no_return_stmt: Identifier '(' argument ')'
                    ;
 argument: arg (',' arg)*

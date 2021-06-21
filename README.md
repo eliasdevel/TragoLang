@@ -1,11 +1,12 @@
 # Trago lang
 
 Uma linguagem que somente cachaceiros entenderão
-
+* **float**  ->  **caipira**
 * **int**  ->  **ceva**
 * **char**  ->  **martelinho** 
 * **main**  ->  **boteco**
 * **void**  ->  **agua**
+* **if**  ->  **beber?**
 * **else**  ->  **nao**
 * **while** -> **bebendo**
 * **print** -> **mijo**
